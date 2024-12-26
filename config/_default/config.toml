@@ -1,0 +1,40 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+theme = "congo"
+
+baseURL = "https://dh-46.github.io/blog/"
+languageCode = "zh-Hant"
+defaultContentLanguage = "zh-Hant"
+
+enableRobotsTXT = true
+summaryLength = 0
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark.extensions.cjk]
+    enable = true
+  [markup.goldmark.extensions.extras]
+    [markup.goldmark.extensions.extras.delete]
+      enable = true
+      [markup.goldmark.extensions.extras.insert]
+        enable = false
+      [markup.goldmark.extensions.extras.mark]
+        enable = true
+      [markup.goldmark.extensions.extras.subscript]
+        enable = true
+      [markup.goldmark.extensions.extras.superscript]
+        enable = true
+  [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+  
