@@ -1,0 +1,498 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="zh-Hant"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>作品集 &middot; DH 開發筆記</title>
+    <meta name="title" content="作品集 &middot; DH 開發筆記" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/blog/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/blog/css/main.bundle.min.3e97d1a40161cd59b059d44499fc9d982d868881f1450889ca07e646a9fb3a8e.css"
+    integrity="sha256-PpfRpAFhzVmwWdREmfydmC2GiIHxRQiJygfmRqn7Oo4="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/blog/js/main.bundle.min.0ce71464304b0e7f6f5dc04656b9ff39cbcb7ff30af0a0e1268c1c3147e8ddd8.js"
+      integrity="sha256-DOcUZDBLDn9vXcBGVrn/OcvLf/MK8KDhJowcMUfo3dg="
+      data-copy="複製"
+      data-copied="已複製"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      工作上或業餘開發的作品們。
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://dh-46.github.io/blog/projects/" />
+  <link rel="alternate" type="application/rss+xml" href="/blog/projects/index.xml" title="DH 開發筆記" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png" />
+    <link rel="manifest" href="/blog/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://dh-46.github.io/blog/projects/">
+  <meta property="og:site_name" content="DH 開發筆記">
+  <meta property="og:title" content="作品集">
+  <meta property="og:description" content="工作上或業餘開發的作品們。">
+  <meta property="og:locale" content="zh_Hant">
+  <meta property="og:type" content="website">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="作品集">
+  <meta name="twitter:description" content="工作上或業餘開發的作品們。">
+
+  
+  
+
+  
+  <meta name="author" content="Daniel Huang" />
+  
+    
+      <link href="mailto:danielhuang.work@gmail.com" rel="me" />
+    
+      <link href="https://github.com/dh-46" rel="me" />
+    
+      <link href="https://linkedin.com/in/daniel-huang-2017" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >快轉到主要內容</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/blog/"
+    >DH 開發筆記</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/blog/posts/"
+                      title="文章列表"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >文章列表</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/blog/projects/"
+                      title="作品集"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >作品集</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/blog/tags/"
+                      title="Tags"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >標籤</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="搜尋 (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                  
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/blog/posts/"
+                  title="文章列表"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >文章列表</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/blog/projects/"
+                  title="作品集"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >作品集</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/blog/tags/"
+                  title="Tags"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >標籤</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="搜尋 (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  
+  <header>
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">作品集</h1>
+  </header>
+  <section
+    class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
+  >
+    
+    <div class="min-h-0 min-w-0 max-w-prose grow">
+      <!-- shortcode 設定 svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="60%" height="" viewBox="0 0 794.1218 505.34514" data-src="https://cdn.undraw.co/illustrations/portfolio-update_6bro.svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" artist="Katerina Limpitsouni" source="https://undraw.co/"><path d="M247.4579,701.19842c-12.25095-1.00787-23.067-9.87117-29.218-20.51384-2.06275-3.569-3.47609-8.25063-1.14018-11.64717a6.40928,6.40928,0,0,1,11.315,1.47119,62.04539,62.04539,0,0,1-.96485-12.64086c.09416-3.586.77176-7.64052,3.75358-9.6347,3.45928-2.31349,8.44549-.47663,10.96167,2.83815s3.19894,7.62671,3.80283,11.74426a10.83041,10.83041,0,0,1,12.03865-13.65713c5.06672.76515,9.03581,5.1519,10.58457,10.03641s1.06522,10.18071.06842,15.207c-1.16883,5.89373-3.06582,11.74062-6.481,16.68417s-8.488,8.929-14.37353,10.13822Z" transform="translate(-202.9391 -197.32743)" fill="#f2f2f2"/><path d="M997.0609,303.32743a106.03391,106.03391,0,0,1-71,100.08c-.66016.23-1.33008.46-2,.67v-107.71h-138.77c.04-.67.08984-1.34.1499-2H924.0609v-21.04a5.002,5.002,0,0,0-5-5H790.98082c.23-.67.47021-1.34.73-2a106.01022,106.01022,0,0,1,205.3501,37Z" transform="translate(-202.9391 -197.32743)" fill="#f2f2f2"/><path d="M919.0609,266.32743h-487a7.00778,7.00778,0,0,0-7,7v330a7.00778,7.00778,0,0,0,7,7h487a7.00779,7.00779,0,0,0,7-7v-330A7.00778,7.00778,0,0,0,919.0609,266.32743Zm5,337a5.002,5.002,0,0,1-5,5h-487a5.002,5.002,0,0,1-5-5v-330a5.002,5.002,0,0,1,5-5h487a5.002,5.002,0,0,1,5,5Z" transform="translate(-202.9391 -197.32743)" fill="#3f3d56"/><rect x="223.1218" y="97.03998" width="499" height="2" fill="#3f3d56"/><circle cx="240.1218" cy="84" r="6" fill="#3f3d56"/><circle cx="257.3718" cy="84" r="6" fill="#3f3d56"/><circle cx="274.6218" cy="84" r="6" fill="#3f3d56"/><path d="M562.0609,335.32743h-88a7.00778,7.00778,0,0,0-7,7v88a7.00778,7.00778,0,0,0,7,7h88a7.00779,7.00779,0,0,0,7-7v-88A7.00778,7.00778,0,0,0,562.0609,335.32743Zm5,95a5.002,5.002,0,0,1-5,5h-88a5.002,5.002,0,0,1-5-5v-88a5.002,5.002,0,0,1,5-5h88a5.002,5.002,0,0,1,5,5Z" transform="translate(-202.9391 -197.32743)" fill="#3f3d56"/><path d="M720.0609,335.82743h-88a6.51259,6.51259,0,0,0-6.5,6.5v88a6.51259,6.51259,0,0,0,6.5,6.5h88a6.51259,6.51259,0,0,0,6.5-6.5v-88A6.51259,6.51259,0,0,0,720.0609,335.82743Z" transform="translate(-202.9391 -197.32743)" fill="#3b82f6"/><path d="M878.0609,335.82743h-88a6.51259,6.51259,0,0,0-6.5,6.5v88a6.51259,6.51259,0,0,0,6.5,6.5h88a6.51259,6.51259,0,0,0,6.5-6.5v-88A6.51259,6.51259,0,0,0,878.0609,335.82743Z" transform="translate(-202.9391 -197.32743)" fill="#e6e6e6"/><path d="M562.0609,467.82743h-88a6.51259,6.51259,0,0,0-6.5,6.5v88a6.51259,6.51259,0,0,0,6.5,6.5h88a6.51259,6.51259,0,0,0,6.5-6.5v-88A6.51259,6.51259,0,0,0,562.0609,467.82743Z" transform="translate(-202.9391 -197.32743)" fill="#e6e6e6"/><path d="M720.0609,467.82743h-88a6.51259,6.51259,0,0,0-6.5,6.5v88a6.51259,6.51259,0,0,0,6.5,6.5h88a6.51259,6.51259,0,0,0,6.5-6.5v-88A6.51259,6.51259,0,0,0,720.0609,467.82743Z" transform="translate(-202.9391 -197.32743)" fill="#3b82f6"/><path d="M878.0609,467.82743h-88a6.51259,6.51259,0,0,0-6.5,6.5v88a6.51259,6.51259,0,0,0,6.5,6.5h88a6.51259,6.51259,0,0,0,6.5-6.5v-88A6.51259,6.51259,0,0,0,878.0609,467.82743Z" transform="translate(-202.9391 -197.32743)" fill="#e6e6e6"/><path d="M540.5609,482.32743h-88a6.50745,6.50745,0,0,1-6.5-6.5v-88a6.50744,6.50744,0,0,1,6.5-6.5h88a6.50745,6.50745,0,0,1,6.5,6.5v88A6.50745,6.50745,0,0,1,540.5609,482.32743Z" transform="translate(-202.9391 -197.32743)" fill="#3b82f6"/><polygon points="202.746 492.088 214.466 488.491 206.17 441.573 188.872 446.881 202.746 492.088" fill="#a0616a"/><path d="M403.482,680.85789h38.53073a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H418.36887A14.88686,14.88686,0,0,1,403.482,680.8579v0A0,0,0,0,1,403.482,680.85789Z" transform="translate(825.89112 1024.95669) rotate(162.93912)" fill="#2f2e41"/><polygon points="102.748 492.358 115.008 492.357 120.84 445.069 102.746 445.07 102.748 492.358" fill="#a0616a"/><path d="M303.06,686.18167h38.53073a0,0,0,0,1,0,0v14.88687a0,0,0,0,1,0,0H317.94689A14.88686,14.88686,0,0,1,303.06,686.18168v0a0,0,0,0,1,0,0Z" transform="translate(441.74335 1189.90807) rotate(179.99738)" fill="#2f2e41"/><path d="M304.80743,552.60788a9.16224,9.16224,0,0,1,.318-14.04558l9.50536-119.69459,19.33086,4.8297L318.48407,540.45594a9.21188,9.21188,0,0,1-13.67664,12.15194Z" transform="translate(-202.9391 -197.32743)" fill="#a0616a"/><circle cx="140.57921" cy="150.55523" r="24.56103" fill="#a0616a"/><path d="M322.16166,415.18605c-5.54194-7.60815-5.71269-18.08683.25708-25.36412,3.89587-4.74914,10.41248-8.54951,21.29248-8.54951,29,0,40,23,40,23s12,22,5,42-7,22-7,22l-46-4S343.47142,444.44079,322.16166,415.18605Z" transform="translate(-202.9391 -197.32743)" fill="#ccc"/><path d="M307.9766,435.09469l9.90967-32.4209a15.50189,15.50189,0,0,1,21.93018-9.24512h0a15.53,15.53,0,0,1,7.08789,20.00977L334.306,442.12984Z" transform="translate(-202.9391 -197.32743)" fill="#ccc"/><path d="M380.71122,463.27242l39,202-21,6-51-133-23,136-22,3s-9.65032-179.945,33-213Z" transform="translate(-202.9391 -197.32743)" fill="#2f2e41"/><path d="M436.84246,453.80485a10.52712,10.52712,0,0,0-.96265,1.3493l-49.53505,2.40166-9.53834-29.11951-16.56185,7.87143,15.58776,43.3713,61.26206-11.98076a10.49579,10.49579,0,1,0-.25193-13.89342Z" transform="translate(-202.9391 -197.32743)" fill="#a0616a"/><path d="M353.31425,407.17672a15.50085,15.50085,0,0,1,16.3623-17.28223h0a15.52954,15.52954,0,0,1,14.53467,15.47168v31.335l-26.936,4.14453Z" transform="translate(-202.9391 -197.32743)" fill="#ccc"/><path d="M348.91975,372.66645c-3.68637-.01605-6.53017-3.89721-6.36494-7.57991s2.63867-6.92285,5.61866-9.09293,6.47479-3.49191,9.798-5.08739,6.61743-3.58561,8.66924-6.64822a14.71557,14.71557,0,0,0,1.02332-13.50438,21.66865,21.66865,0,0,0-9.3332-10.22418,28.37777,28.37777,0,0,0-37.60707,8.25038l-4.20808,11.45787c-4.28786,5.15613-4.968,12.81333-2.33217,18.97968s8.24814,10.80579,14.58112,13.0114a35.79392,35.79392,0,0,0,19.8411.59488" transform="translate(-202.9391 -197.32743)" fill="#2f2e41"/><path d="M326.47317,334.50613c-1.80894-2.89931-4.94439-4.74325-8.18587-5.82543a25.72431,25.72431,0,0,0-33.83244,23.00283c-.34357,6.31437,1.63365,12.48912,2.79545,18.70518s1.39291,13.08161-2.03446,18.396c-2.61053,4.0478-6.96387,6.59634-11.26083,8.77251-3.58128,1.81371-7.45507,3.51578-11.45314,3.1544s-8.01642-3.52812-7.91033-7.54108a32.0544,32.0544,0,0,0-2.68163,9.08033c-.28127,3.15593.49659,6.56125,2.77606,8.76193,3.3131,3.19859,8.56255,2.9646,13.1157,2.27441,9.85694-1.49417,19.83818-4.29543,27.62552-10.52031s12.95465-16.47494,10.90388-26.23127c-.85666-4.07547-2.86993-7.796-4.49677-11.62968s-2.89692-8.027-2.14959-12.124a14.73513,14.73513,0,0,1,7.49255-9.98176,19.60142,19.60142,0,0,1,12.52266-1.899c2.79906.45932,6.29406,1.17251,7.95419-1.12742a4.50752,4.50752,0,0,0-.09367-4.80858,13.24754,13.24754,0,0,0-3.59259-3.5596" transform="translate(-202.9391 -197.32743)" fill="#2f2e41"/><path d="M511.4238,702.67257h-307.294a1.19069,1.19069,0,1,1,0-2.38137h307.294a1.19069,1.19069,0,1,1,0,2.38137Z" transform="translate(-202.9391 -197.32743)" fill="#3f3d56"/></svg>
+
+    </div>
+  </section>
+  
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8">
+        <em>這裡還沒有任何文章。</em>
+      </p>
+    </section>
+  
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="捲動到頁頂"
+            title="捲動到頁頂"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2024
+            Daniel Huang
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          以 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a> 製作
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="切換為深色模式"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="切換為淺色模式"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://dh-46.github.io/blog/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜尋"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="關閉 (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

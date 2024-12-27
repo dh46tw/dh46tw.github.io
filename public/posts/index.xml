@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章列表 on DH 開發筆記</title>
+    <link>https://dh-46.github.io/blog/posts/</link>
+    <description>Recent content in 文章列表 on DH 開發筆記</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant</language>
+    <lastBuildDate>Thu, 23 Nov 2023 16:38:00 +0000</lastBuildDate>
+    <atom:link href="https://dh-46.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android 動態更改應用程式圖標 App Icon</title>
+      <link>https://dh-46.github.io/blog/posts/android-dynamic-app-icon/</link>
+      <pubDate>Thu, 23 Nov 2023 16:38:00 +0000</pubDate>
+      <guid>https://dh-46.github.io/blog/posts/android-dynamic-app-icon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git 更新版本</title>
+      <link>https://dh-46.github.io/blog/posts/git-update/</link>
+      <pubDate>Thu, 27 Apr 2023 15:16:00 +0800</pubDate>
+      <guid>https://dh-46.github.io/blog/posts/git-update/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

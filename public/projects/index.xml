@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>作品集 on DH 開發筆記</title>
+    <link>https://dh-46.github.io/blog/projects/</link>
+    <description>Recent content in 作品集 on DH 開發筆記</description>
+    <generator>Hugo</generator>
+    <language>zh-Hant</language>
+    <atom:link href="https://dh-46.github.io/blog/projects/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
