@@ -10,7 +10,7 @@ title = "DH 開發筆記"
   dateFormat = "January 2, 2006"
 
   # mainSections = ["posts", "projects"]
-  # description = "My awesome website"
+  description = "技術分享與專案展示，探索軟體開發的可能性。"
 
 [params.author]
   name = "Daniel Huang"
