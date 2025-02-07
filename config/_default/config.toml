@@ -8,6 +8,9 @@ baseURL = "https://dh-46.github.io/blog/"
 languageCode = "zh-Hant"
 defaultContentLanguage = "zh-Hant"
 
+#  version 4
+googleAnalytics = "G-KTCCNLFHFH"
+
 enableRobotsTXT = true
 summaryLength = 0
 
