@@ -16,7 +16,7 @@ date: 2023-11-23T16:38:00
 
 另外一個 App [DuckDuckGo](https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&pcampaignid=web_share) 也有一樣的功能。不過操作流程上不太一樣。DuckDuckGo 不需要特別啟用自選圖標，但在每次更換 Icon 時，App 都會在設定完成後自動關閉，使用者必須自動重啟 App 才能繼續使用。 
 
-{{< alert "empty" >}} 🚩 兩者使用體驗差異整理:
+🚩 兩者使用體驗差異整理:
 
 1. Todoist: 
     - 首次使用必須啟用功能。
@@ -26,7 +26,6 @@ date: 2023-11-23T16:38:00
     - 不須特別啟用功能。
     - 每次更換圖標都會自動關閉 App，使用者要自己重開。
 
-{{< /alert >}}
 
 ==如果想直接看怎麼做，可以跳到 [三、解決方案](#三、解決方案)。==
 
@@ -69,8 +68,7 @@ Shortcuts 比較代表性的 App 是 Instagram。但仔細觀察兩個 App 所�
     </intent-filter>
 </activity-alias>
 ```
-
-{{< alert "empty" >}}  
+ 
 💡 什麼是 `activity-alias`?
 
 顧名思義，就是 `Activity` 的別名(alias)。
@@ -81,7 +79,6 @@ Shortcuts 比較代表性的 App 是 Instagram。但仔細觀察兩個 App 所�
 
 [官方文件連結](https://developer.android.com/guide/topics/manifest/activity-alias-element)  
 
-{{< /alert >}}  
 
 設定完成後，在程式中動態的啟用與關閉 `activity-alias` 來達到更換 Icon 的效果。
 
@@ -109,12 +106,10 @@ private fun changeEnabledComponent(enabled: String, disabled: String) {
 }
 ```
 
-{{< alert "empty" >}}
 🚨 前面所完成的版本，雖然可以動態改 Icon，但是會有以下幾個問題:
 
 1. 每次更換 Icon 都會關閉 App，沒辦法像 Todoist 一樣，只要第一次啟用功能時關閉就好。
 2. Debug install 錯誤。在換成 `activitiy-alias` 的狀態下，透過 IDE 是沒辦法重新 Install App 的。會出現 `Error running 'app': Activity class {tw.dh46.dynamicicon/tw.dh46.dynamicicon.MainActivity} does not exist` 的錯誤。如果要透過 IDE Reinstall，就必須換回原本的 `activity` tag。  
-{{< /alert >}}
 
 ## 三、解決方案
 
@@ -435,13 +430,11 @@ class AppIconManager(
 - 將 `BuildIn` 設為 `COMPONENT_ENABLED_STATE_ENABLED`
 - 將 `Default` 設為 `COMPONENT_ENABLED_STATE_DEFAULT`
 
-{{< alert "empty" >}}
 💡 以上完成的版本，就可以達到與 Todoist 相同的使用體驗。
 
 ![](attachments/android-dynamic-app-icon.gif)
 
 如果有需要完整的範例專案，請參考 [Github: dh-46/android-dynamic-app-icon-demo](https://github.com/dh-46/android-dynamic-app-icon-demo)。
-{{< /alert >}}
 
 ## 四、已知問題
 

@@ -5,13 +5,11 @@ tags:
 date: 2021-03-31T18:31:00
 ---
 
-{{< alert "empty" >}}
 📢 2024/08/26 更新 
 
 [Google 已不再接受新的考試報名，看來也沒有要再開新的 Android 認證了😢。](https://developers.google.com/certification/associate-android-developer)
 
 ![image](https://hackmd.io/_uploads/ryP12OYoA.png)
-{{< /alert >}}
 
 ## 前言
 
@@ -49,14 +47,14 @@ date: 2021-03-31T18:31:00
 首先會先看到一份說明網頁，說明完整的考試流程與規則。
 重點大概有下列幾點:
 
-{{< alert "empty" >}}
+
 1. 安裝最新版本的 Android Studio 與 SDK，並下載考試專用的 Plugin。
 2. 考試時間共 8 小時，時間到了系統會自動上傳。 (不含試後錄影答題的時間)
 3. 考試期間必須保持連網。
 4. 考試期間是可以 Google 找答案的。
 5. 切勿與他人合作考試。
 6. 錄影答題沒完成視同考試失敗。
-{{< /alert >}}
+
 
 安裝完環境與 Plugin 後，按下 Android Studio 上的考試鈕，就可以開始考試了。
 基本上考試的內容就是要完成一個專案，會提供你這個案子的規格與必須要完成的任務。
@@ -76,17 +74,17 @@ date: 2021-03-31T18:31:00
 
 以下提供幾個我在這次的考試中有碰到的關鍵字:
 
-{{< alert "empty" >}}
+
 1. Paging Library
 2. Room (SQLite)
-4. RecyclerView
-5. ConstraintLayout
-6. Android UI Test
-7. Notification
-8. WorkManager
-9. MVVM
-10. SharedPreference
-{{< /alert >}}
+3. RecyclerView
+4. ConstraintLayout
+5. Android UI Test
+6. Notification
+7. WorkManager
+8. MVVM
+9.  SharedPreference
+
 
 如果你有先看過前面提到的學習指南，就會發現基本上就是指南裡有提到的東西，這上面都考了。XD
 
@@ -112,14 +110,10 @@ date: 2021-03-31T18:31:00
 
 錄影面談我個人認為的重點有:
 
-{{< alert "danger" >}}
 
 1. 英文閱讀與口說要稍微練一下。因為每個題目的回答時間都很短，又需要消化題目與思考，對於英文閱讀與口說比較不熟悉的人，可能會有點吃虧。
 2. 對於 Android 的元件除了會使用之外，原理與觀念要多加了解。
 3. 網路與錄影設備要提前測試與準備。
-
-{{< /alert >}}
-
 
 ## 最後: 考試結果
 
