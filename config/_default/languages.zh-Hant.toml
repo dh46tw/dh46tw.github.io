@@ -3,20 +3,20 @@ languageName = "正體中文"
 languageDirection = "ltr"
 weight = 1
 
-title = "DH 開發筆記"
+title = "DH's Blog"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
   dateFormat = "January 2, 2006"
 
   # mainSections = ["posts", "projects"]
-  description = "技術分享與專案展示，探索軟體開發的可能性。"
+  description = "主要分享 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。希望每個走進來的讀者，都能在這裡找到自己需要的東西。"
 
 [params.author]
   name = "Daniel Huang"
   image = "img/author.jpg"
   headline = "An Android Developer from Taiwan! 👨‍💻"
-  bio = "一位Android工程師，每天對於如何在茫茫技術海中存活感到憂慮。每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。"
+  bio = "一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。"
   links = [
      { email = "mailto:danielhuang.work@gmail.com" },
      { github = "https://github.com/dh-46" },
