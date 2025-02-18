@@ -121,10 +121,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    # - identifier: categories
-    #   name: categories
-    #   url: /categories/
-    #   weight: 10
+    - identifier: archives
+      name: 所有文章
+      url: archives
+      weight: 5
     - identifier: tags
       name: 標籤
       url: /tags/
