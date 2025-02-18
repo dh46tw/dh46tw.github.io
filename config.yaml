@@ -155,3 +155,9 @@ outputs:
 services:
   googleAnalytics:
     ID: G-KTCCNLFHFH
+
+sitemap:
+  changeFreq: "weekly" # 建議搜尋引擎該頁面多久更新一次，空字串 ("")，表示不向搜尋引擎建議更新頻率。
+  disable: false # 是否停用 sitemap 產生。
+  filename: sitemap.xml # sitemap 檔案名稱。
+  priority: 0.5 # 建議搜尋引擎該頁面的重要性，範圍 0.0 ~ 1.0，-1 表示不向搜尋引擎建議重要性。
