@@ -5,4 +5,5 @@ layout: "search" # necessary for search
 # description: "Description for Search"
 summary: "search"
 placeholder: "輸入關鍵字搜尋文章"
+robotsNoIndex: true # 阻擋搜尋引擎爬取
 ---
