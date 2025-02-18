@@ -74,7 +74,16 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there, I'm Daniel. \U0001F44B"
-    Content: "分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。希望每個走進來的朋友，都能在這裡找到自己需要的資訊。"
+    Content: > 
+      - 一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。
+
+      - 每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。
+
+      - 
+
+      - 在這裡我會分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。
+
+      - 希望每個走進來的朋友，都能在這裡找到自己需要的資訊。"
 
   socialIcons:
     - name: email
@@ -121,6 +130,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: about
+      name: 關於我
+      url: /about/
+      weight: 0
     - identifier: archives
       name: 所有文章
       url: archives
