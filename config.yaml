@@ -20,7 +20,7 @@ params:
   keywords: [Blog, Android 開發, Kotlin, Java, 技術分享, 軟體開發, Portfolio] # SEO 關鍵字，有助於搜尋引擎識別網站主題
   author: Daniel Huang # 文章的作者名稱，會顯示在文章元資訊中
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
+  images: [""] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
   DateFormat: "January 2, 2006" # 設定文章日期顯示格式（這是 Go 語言的日期格式）
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -45,31 +45,34 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
-    safari_pinned_tab: "/android-chrome-192x192.png"
+    favicon: "/favicon/favicon.ico"
+    favicon16x16: "/favicon/favicon-16x16.png"
+    favicon32x32: "/favicon/favicon-32x32.png"
+    apple_touch_icon: "/favicon/apple-touch-icon.png"
+    safari_pinned_tab: "/favicon/android-chrome-192x192.png"
 
   label: # 首頁標題與 icon
     text: "DH's Blog"
-    icon: "/logo-120.png"
+    icon: "/img/logo-120.png"
     iconHeight: 30
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    title: Hi there, I'm Daniel. 👋
+    subtitle: > 
+      一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。
+
+       每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。
+    imageUrl: "/img/author.jpg"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: Posts
+      - name: 所有文章
         url: posts
-      - name: Tags
-        url: tags
+      - name: 關於我
+        url: about
 
   # home-info mode
   homeInfoParams:
@@ -98,6 +101,8 @@ params:
       url: "https://stackoverflow.com/users/9982091/d-h"
     - name: other
       url: "https://ithelp.ithome.com.tw/users/20160271/profile"
+    - name: rss
+      url: "/index.xml"
 
   # analytics:
   #   google:
@@ -135,7 +140,7 @@ menu:
       url: /about/
       weight: 0
     - identifier: archives
-      name: 所有文章
+      name: 歷史文章
       url: archives
       weight: 5
     - identifier: tags
