@@ -12,6 +12,7 @@ date: 2025-02-11
 使用者的手機為 Sony 品牌，首次安裝 App 時，系統版本為 Android 14，能夠正常使用。  
 近期系統升級為 Android 15 後，開啟 App 即閃退。即使移除後重新安裝，仍然無法使用。
 ```
+
 ## 二、查看錯誤事件
 
 ![](./encryptedsharedpreference-error-1-crashlytics.png)
@@ -19,7 +20,7 @@ date: 2025-02-11
 查找 Crashlytics 上的錯誤事件，全部事件只有兩筆，其中只有 `BasePreference.pref_delegate$lambda$0` 這筆看起來最為相關。
 查看錯誤訊息的內容，確認是在實例化 `EncryptedSharedPreference` 時出了問題。
 
-> 程式裡實例的方式是參考 [Android_SharedPreferences 加密 Jetpack EncryptedSharedPreferences](Android_SharedPreferences%20加密%20Jetpack%20EncryptedSharedPreferences.md)。
+> 程式裡實例的方式是參考 [Android 開發 | 加密版的 SharedPreference - EncryptedSharedPreferences](/../posts/2021/android-encryptedsharedpreferences/)。
 
 ```
 Fatal Exception: com.google.crypto.tink.shaded.protobuf.D: Protocol message contained an invalid tag (zero).
