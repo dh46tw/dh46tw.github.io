@@ -1,8 +1,52 @@
-<script src="https://utteranc.es/client.js"
-        repo="dh-46/dh-46.github.io"
-        issue-term="title"
-        label="comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+<script>
+        function loadUtterances(isDarkMode) {
+                const commentContainer = document.getElementById('utterances-container')
+                const theme = (isDarkMode ? 'github-dark' : 'github-light');
+
+                if (commentContainer !== null) {
+                        commentContainer.innerHTML = ''
+                        const script = document.createElement('script');
+                        script.src = 'https://utteranc.es/client.js';
+                        script.setAttribute('repo', 'dh-46/dh-46.github.io');  // 替換成你的 Repo
+                        script.setAttribute('issue-term', 'title');
+                        script.setAttribute('theme', theme);
+                        script.setAttribute('crossorigin', 'anonymous');
+                        script.setAttribute('label', 'comment')
+                        script.async = true;
+
+                        commentContainer.appendChild(script);
+                }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+                loadUtterances(getCurrentTheme() == 'dark')
+        });
+
+        function getCurrentTheme() {
+                return document.body.classList.contains('dark') ? 'dark' : 'light';
+        }
+
+        // Watch for theme changes
+        const themeObserver = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                                const isDarkMode = getCurrentTheme() === 'dark';
+                                loadUtterances(isDarkMode);
+                                console.log(`changing theme`);
+                        }
+                });
+        });
+
+        // Start observing the body element for class changes
+        themeObserver.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['class']
+        });
 </script>
+
+<div id="utterances-container"></div>
+
+<!-- 
+Dyanmic comment theme 
+Ref: https://ramsayleung.github.io/zh/post/2024/hugo%E8%AF%84%E8%AE%BA%E7%BB%84%E4%BB%B6%E8%87%AA%E9%80%82%E5%BA%94%E5%8D%9A%E5%AE%A2%E6%9A%97%E9%BB%91%E4%B8%BB%E9%A2%98/ 
+-->
