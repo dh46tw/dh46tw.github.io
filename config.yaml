@@ -9,8 +9,8 @@ buildFuture: false
 buildExpired: false
 
 minify:
-  disableXML: true
-  minifyOutput: true
+  disableXML: true  # 不壓縮 XML 文件
+  minifyOutput: true # 壓縮所有其他支援的輸出文件
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
