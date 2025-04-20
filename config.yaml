@@ -104,9 +104,9 @@ params:
     - name: rss
       url: "/index.xml"
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "XYZabc" # Google Search Console 的網站驗證標籤
+  analytics:
+    google:
+      SiteVerificationTag: "LHTKPbW1GFa3DApZWBArO2q2XopPi2cHu0c39NoboaQ" # Google Search Console 的網站驗證標籤
   #   bing:
   #     SiteVerificationTag: "XYZabc" # Bing Webmaster Tools 的驗證標籤
   #   yandex:

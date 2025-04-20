@@ -1,4 +1,8 @@
 User-agent: *
-Disallow: /BusTicket_BookingSys/
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /favicon/
 Sitemap: https://dh-46.github.io/sitemap.xml
 Sitemap: https://dh-46.github.io/sitemap
