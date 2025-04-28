@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /sitemap.xml
 Disallow: /assets/
 Disallow: /css/
 Disallow: /js/
