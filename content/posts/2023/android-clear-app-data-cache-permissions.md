@@ -23,7 +23,7 @@ date: 2023-12-05
 - 內部 (Internal) 與外部 (External) 的應用程式私有資料都會被清除。
 - 所有已取得的動態請求權限都會被撤銷。
 
-```kotlin=
+```kotlin
 val activityManager = application.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 activityManager.clearApplicationUserData()
 ```
@@ -34,7 +34,7 @@ activityManager.clearApplicationUserData()
 
 透過 `Runtime` 執行 ADB 指令 `pm clear packageName`。
 
-```kotlin=
+```kotlin
 Runtime.getRuntime().exec("pm clear ${applicationContext.packageName}")
 ```
 
@@ -45,7 +45,7 @@ Reference: [StackOverflow: Clear Application's Data Programmatically](https://st
 有時候在開發或測試 App 的時候，也會需要還原 App 的初始狀態。
 這時候可以改在 ADB 環境下，執行前述 `Runtime` 執行的清除指令。
 
-```adb=
+```adb
 adb shell pm clear packageName
 ```
 
@@ -55,7 +55,7 @@ Reference: [StackOverflow: Clear android application user data](https://stackove
 
 ### 單獨清除快取?
 
-```kotlin=
+```kotlin
 // 內部儲存空間
 cacheDir.deleteRecursively()
 // 外部儲存空間
