@@ -1,4 +1,4 @@
-baseURL: "https://dh-46.github.io/"
+baseURL: "https://dh46tw.github.io/"
 title: DH's Blog
 paginate: 5 # 首頁最近文章數量
 theme: PaperMod
@@ -17,7 +17,7 @@ params:
   title: DH's Blog # 網站的標題，會顯示在瀏覽器標籤頁和首頁
   # 網站的描述，用於 SEO 和 OpenGraph（社交媒體預覽）
   description: "分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。希望每個走進來的朋友，都能在這裡找到自己需要的資訊。"
-  keywords: [Blog, Android 開發, Kotlin, Java, 技術分享, 軟體開發, Portfolio] # SEO 關鍵字，有助於搜尋引擎識別網站主題
+  keywords: [Blog, Android 開發, Kotlin, Java, 技術分享, 軟體開發, Portfolio, 部落格] # SEO 關鍵字，有助於搜尋引擎識別網站主題
   author: Daniel Huang # 文章的作者名稱，會顯示在文章元資訊中
   # author: ["Me", "You"] # multiple authors
   images: [""] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
@@ -94,9 +94,9 @@ params:
     - name: linkedin
       url: "https://linkedin.com/in/daniel-huang-2017"
     - name: github
-      url: "https://github.com/dh-46"
+      url: "https://github.com/dh46tw"
     - name: medium
-      url: "https://medium.com/@dh46-tw"
+      url: "https://medium.com/@dh46tw"
     - name: stackoverflow
       url: "https://stackoverflow.com/users/9982091/d-h"
     - name: other
@@ -118,7 +118,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   # editPost:
-  #   URL: "https://github.com/dh-46/dh-46.github.io/content"
+  #   URL: "https://github.com/dh46tw/dh46tw.github.io/content"
   #   Text: "Suggest Changes" # edit text
   #   appendFilePath: true # to append file path to Edit link
 

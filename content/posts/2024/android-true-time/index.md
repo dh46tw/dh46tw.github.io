@@ -11,7 +11,7 @@ date: 2024-08-26
 前陣子專案有一項需求，是希望 App 能夠**取得準確且不會被使用者竄改的時間**。
 研究了一下 [StackOverflow: How do I get the most accurate time with Android?](https://stackoverflow.com/a/21760337/9982091) 上面的討論，決定整理成一篇完整的筆記，也許能拯救到未來的自己? XD
 
-<!-- > 以下內容，相關的實作細節可參考 [Sample App: android-real-time](https://github.com/dh-46/android-real-time)
+<!-- > 以下內容，相關的實作細節可參考 [Sample App: android-real-time](https://github.com/dh46tw/android-real-time)
 > [name=Daniel Huang][time=Tue, Jun 6, 2023 5:03 PM][color=#5e7ee0] -->
 
 ### 1-1 在 Android 中取得當下時間

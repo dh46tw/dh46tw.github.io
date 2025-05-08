@@ -124,4 +124,4 @@ date: 2021-03-31T18:31:00
 考試驗證的速度比我想像中的還要快，考完後第三天就收到結果通知信。
 $149 美金沒有白費了。XD
 
-> ✍ 本文同步分享在 [Medium](https://medium.com/dh-blog/2021-associate-android-developer-%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-7f2ce00d4d6)、[科技島 Tech Nice](https://www.technice.com.tw/techmanage/18297/)、[HackMD](https://hackmd.io/@dh-46/2021-aad-experience)
+> ✍ 本文同步分享在 [Medium](https://medium.com/dh-blog/2021-associate-android-developer-%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97-7f2ce00d4d6)、[科技島 Tech Nice](https://www.technice.com.tw/techmanage/18297/)、[HackMD](https://hackmd.io/@dh46tw/2021-aad-experience)

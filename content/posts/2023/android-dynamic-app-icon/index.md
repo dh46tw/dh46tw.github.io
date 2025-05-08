@@ -434,7 +434,7 @@ class AppIconManager(
 
 ![](attachments/android-dynamic-app-icon.gif)
 
-如果有需要完整的範例專案，請參考 [Github: dh-46/android-dynamic-app-icon-demo](https://github.com/dh-46/android-dynamic-app-icon-demo)。
+如果有需要完整的範例專案，請參考 [Github: dh46tw/android-dynamic-app-icon-demo](https://github.com/dh46tw/android-dynamic-app-icon-demo)。
 
 ## 四、已知問題
 

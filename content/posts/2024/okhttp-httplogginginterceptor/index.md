@@ -133,4 +133,4 @@ Fatal Exception: java.lang.OutOfMemoryError: Failed to allocate a 88561088 byte 
 
 ---
 
-> 本文章同步發表在 [iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10341913)、[HackMD](https://hackmd.io/@dh-46/okhttp-HttpLoggingInterceptor)
+> 本文章同步發表在 [iT 邦幫忙](https://ithelp.ithome.com.tw/articles/10341913)、[HackMD](https://hackmd.io/@dh46tw/okhttp-HttpLoggingInterceptor)

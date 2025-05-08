@@ -6,7 +6,7 @@ tags:
 date: 2023-05-27
 ---
 
-> 本文同步發表在 [HackMD](https://hackmd.io/@dh-46/android-lib-timber) & [Medium](https://dh46-tw.medium.com/%E6%AF%94-android-%E5%8E%9F%E7%94%9F%E6%9B%B4%E6%96%B9%E4%BE%BF%E7%9A%84-log-%E5%B7%A5%E5%85%B7-timber-bc7e27e78cb8)
+> 本文同步發表在 [HackMD](https://hackmd.io/@dh46tw/android-lib-timber) & [Medium](https://dh46tw.medium.com/%E6%AF%94-android-%E5%8E%9F%E7%94%9F%E6%9B%B4%E6%96%B9%E4%BE%BF%E7%9A%84-log-%E5%B7%A5%E5%85%B7-timber-bc7e27e78cb8)
 
 ## Timber 是什麼
 
@@ -35,7 +35,7 @@ if (BuildConfig.DEBUG) {
 }
 ```
 
-> 同步發表在 [HackMD](https://hackmd.io/@dh-46/android-lib-timber) & [Medium](https://dh46-tw.medium.com/%E6%AF%94-android-%E5%8E%9F%E7%94%9F%E6%9B%B4%E6%96%B9%E4%BE%BF%E7%9A%84-log-%E5%B7%A5%E5%85%B7-timber-bc7e27e78cb8)
+> 同步發表在 [HackMD](https://hackmd.io/@dh46tw/android-lib-timber) & [Medium](https://dh46tw.medium.com/%E6%AF%94-android-%E5%8E%9F%E7%94%9F%E6%9B%B4%E6%96%B9%E4%BE%BF%E7%9A%84-log-%E5%B7%A5%E5%85%B7-timber-bc7e27e78cb8)
 
 ## Timber 怎麼使用
 
