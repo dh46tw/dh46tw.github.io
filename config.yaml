@@ -174,7 +174,7 @@ outputs:
 # 設定 Google Analytics
 services:
   googleAnalytics:
-    ID: G-KTCCNLFHFH
+    ID: G-Q39164QFN5
 
 sitemap:
   changeFreq: "" # 建議搜尋引擎該頁面多久更新一次，空字串 ("")，表示不向搜尋引擎建議更新頻率。
