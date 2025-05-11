@@ -1,5 +1,5 @@
 baseURL: "https://dh46tw.github.io/"
-title: DH's Blog
+title: Code with DH
 paginate: 5 # 首頁最近文章數量
 theme: PaperMod
 timeZone: "Asia/Taipei" # 設定時區
@@ -15,9 +15,9 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: DH's Blog # 網站的標題，會顯示在瀏覽器標籤頁和首頁
+  title: Code with DH # 網站的標題，會顯示在瀏覽器標籤頁和首頁
   # 網站的描述，用於 SEO 和 OpenGraph（社交媒體預覽）
-  description: "分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。希望每個走進來的朋友，都能在這裡找到自己需要的資訊。"
+  description: "Code with DH 是一個專注於 Android 開發的技術部落格，旨在分享開發上踩過的坑，無論是學習 Kotlin、Jetpack Compose、Android SDK ，還是解決開發過程中的常見問題。作為一名 Android 工程師，我分享在開發過程中的點滴經歷、挑戰與解決方案，並且會不定期融入一些與程式設計和生活興趣相關的內容，讓技術與生活並行。每次動筆時，我總是不斷告訴自己：筆記不一定是為了別人，而是為了自己。這段旅程的每一篇文章，無論是技術文章還是隨想分享，都是我在學習與成長的過程中所留下的紀錄。希望每位來到這裡的朋友，都能在這裡找到自己需要的資訊，一起進步！"
   keywords: [Blog, Android 開發, Kotlin, Java, 技術分享, 軟體開發, Portfolio, 部落格] # SEO 關鍵字，有助於搜尋引擎識別網站主題
   author: Daniel Huang # 文章的作者名稱，會顯示在文章元資訊中
   # author: ["Me", "You"] # multiple authors
@@ -53,7 +53,7 @@ params:
     safari_pinned_tab: "/favicon/android-chrome-192x192.png"
 
   label: # 首頁標題與 icon
-    text: "DH's Blog"
+    text: "Code with DH"
     icon: "/img/logo-120.png"
     iconHeight: 30
 
