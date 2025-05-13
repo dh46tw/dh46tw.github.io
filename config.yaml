@@ -170,6 +170,7 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+    - SITEMAP
 
 # 設定 Google Analytics
 services:
