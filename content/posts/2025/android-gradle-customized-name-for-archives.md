@@ -4,6 +4,7 @@ tags:
   - Android/Build
   - Gradle
 date: 2025-04-30
+lastMod: 2025-05-14
 description: 教你如何透過 Gradle 客製 Android 專案輸出檔案名稱，為 APK、AAB、AAR 自動加上版本號與 Build Type，提升測試流程與團隊協作效率。
 ---
 
@@ -26,6 +27,8 @@ android {
 }
 ```
 
+> BTW: `setProperty(key, value)` 在 groovy 與 kts 都是通用的。
+
 🚨 **注意：** 這個設定只會影響輸出檔案名稱的前綴，並不會完整覆蓋檔名結構。例如：
 
 ```
@@ -44,20 +47,41 @@ android {
 
 同樣在 `build.gradle (app)` 的 `android` 區塊中，加入以下設定，即可針對每個 Variant 輸出不同名稱的 APK：
 
-```groovy
-// 檔案中最底部
-android {
-    // 略...
+#### Groovy
 
-    applicationVariants.configureEach { variant ->
-        variant.outputs.configureEach {output ->
-            def variantName = variant.name
-            def versionName = variant.versionName
-            def versionCode = variant.versionCode
-		    // 這裡的 archivesBaseName 可以透過前述的 setProperty() override
-            outputFileName = "${archivesBaseName}-${versionName}.apk"
-        }
+```groovy
+applicationVariants.configureEach { variant ->
+    variant.outputs.configureEach {output ->
+        def variantName = variant.name
+        def versionName = variant.versionName
+        def versionCode = variant.versionCode
+	    // 這裡的 archivesBaseName 可以透過前述的 setProperty() override
+        outputFileName = "${archivesBaseName}-${versionName}.apk"
     }
+}
+```
+
+#### KTS
+
+> Updated on 2025/05/14 
+
+```kotlin
+// (非必要) 預設是專案名稱
+setProperty("archivesBaseName", "taiwanNo1")
+
+// 主要設定是這個區塊
+applicationVariants.configureEach {  
+    val variant = this  
+    outputs.configureEach {  
+        if (this is ApkVariantOutputImpl) {  
+            val output: ApkVariantOutputImpl = this  
+            val variantName = variant.name  
+            val versionName = variant.versionName  
+            val versionCode = variant.versionCode  
+			val archivesBaseName = project.properties["archivesBaseName"]
+            output.outputFileName = "$archivesBaseName-${versionName}.apk"
+        }  
+    }  
 }
 ```
 
@@ -72,18 +96,17 @@ taiwanNo1-1.0.3-debug.apk
 
 ### AAR：變更 Library 模組輸出檔名
 
-如果你是在開發 Android Library（非應用程式），也可以使用相似的方式客製 AAR 檔名。差別只在於 Variant 類型需改用 `libraryVariants`：
+如果你是在開發 Android Library（非應用程式），也可以使用相似的方式客製 AAR 檔名。
+
+在 `build.gradle (library)` 的 `android` 區塊中加入以下設定，差別只在於 Variant 類型需改用 `libraryVariants`：
 
 ```groovy
-android {  
-    // 其他設定
-  
-    libraryVariants.configureEach { variants ->  
-        variants.outputs.all { output ->  
-	        // 原本 Library 名稱-BuildType 名稱-版本名
-            outputFileName = "${archivesBaseName}-${variants.name}-${defaultConfig.versionName}.aar"  
-        }  
-    }}
+libraryVariants.configureEach { variants ->  
+    variants.outputs.all { output ->  
+        // 原本 Library 名稱-BuildType 名稱-版本名
+        outputFileName = "${archivesBaseName}-${variants.name}-${defaultConfig.versionName}.aar"  
+    }  
+}
 ```
 
 設定完成後，打包出來的檔案會像這樣：
