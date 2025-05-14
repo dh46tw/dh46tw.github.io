@@ -1,5 +1,5 @@
 baseURL: "https://dh46tw.github.io/"
-title: DH's Blog
+title: Code with DH
 paginate: 5 # 首頁最近文章數量
 theme: PaperMod
 timeZone: "Asia/Taipei" # 設定時區
@@ -15,13 +15,13 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: DH's Blog # 網站的標題，會顯示在瀏覽器標籤頁和首頁
+  title: Code with DH # 網站的標題，會顯示在瀏覽器標籤頁和首頁
   # 網站的描述，用於 SEO 和 OpenGraph（社交媒體預覽）
-  description: "分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。希望每個走進來的朋友，都能在這裡找到自己需要的資訊。"
-  keywords: [Blog, Android 開發, Kotlin, Java, 技術分享, 軟體開發, Portfolio, 部落格] # SEO 關鍵字，有助於搜尋引擎識別網站主題
+  description: "一個聚焦於 Android 開發的技術部落格，分享 Kotlin、Google Maps SDK、Android Studio 實作技巧與 Debug 筆記，融合開發經驗與日常觀察，適合開發者學習與交流。"
+  keywords: [Android 開發, Android 教學, Android 筆記, Kotlin 教學, Kotlin 開發, Jetpack Compose, Android Studio, Java 開發, 技術部落格, 技術分享, 軟體開發, 個人網站, 開發筆記, Side Project, Android 工程師, 開發者成長, Portfolio, Blog, 部落格] # SEO 關鍵字，有助於搜尋引擎識別網站主題
   author: Daniel Huang # 文章的作者名稱，會顯示在文章元資訊中
   # author: ["Me", "You"] # multiple authors
-  images: [""] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
+  images: ["/img/author.jpg"] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
   DateFormat: "January 2, 2006" # 設定文章日期顯示格式（這是 Go 語言的日期格式）
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -30,7 +30,7 @@ params:
   ShowShareButtons: true # 顯示社群分享按鈕（如 Facebook、Twitter）
   ShowPostNavLinks: true # 顯示「上一篇 / 下一篇」導覽連結
   ShowBreadCrumbs: true # 顯示導覽路徑（Breadcrumbs），讓使用者知道當前頁面位置
-  ShowCodeCopyButtons: false # 是否在程式碼區塊右上角顯示「複製」按鈕（false 表示關閉）
+  ShowCodeCopyButtons: true # 是否在程式碼區塊右上角顯示「複製」按鈕（false 表示關閉）
   ShowWordCount: true # 顯示「字數統計」
   ShowRssButtonInSectionTermList: true # 是否在分類 / 標籤頁顯示 RSS 訂閱按鈕
   UseHugoToc: false # 是否使用 Hugo 內建的目錄（false 表示使用 PaperMod 提供的目錄功能）
@@ -53,7 +53,7 @@ params:
     safari_pinned_tab: "/favicon/android-chrome-192x192.png"
 
   label: # 首頁標題與 icon
-    text: "DH's Blog"
+    text: "Code with DH"
     icon: "/img/logo-120.png"
     iconHeight: 30
 
@@ -62,9 +62,9 @@ params:
     enabled: false # needs to be explicitly set
     title: Hi there, I'm Daniel. 👋
     subtitle: > 
-      一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。
+      - 一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。
 
-       每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。
+      - 每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。
     imageUrl: "/img/author.jpg"
     imageWidth: 120
     imageHeight: 120
@@ -81,13 +81,15 @@ params:
     Content: > 
       - 一位 Android 工程師，每天對於如何在茫茫技術海中存活感到憂慮。
 
-      - 每次動筆都不斷告訴自已，筆記不是為了別人，是為了自己。
+      - 每次動筆都不斷告訴自已：筆記不是為了別人，而是為了自己。
 
       - 
 
-      - 在這裡我會分享一些 Android 開發中經歷的大小事，偶爾也會夾雜一些興趣使然的東西。
+      - 在這裡，我將分享我在開發中經歷的大小事，不論是各種奇怪的 Bug，還是學習過程中的心得與反思；偶爾也會夾雜一些因為興趣而產生的分享。
 
-      - 希望每個走進來的朋友，都能在這裡找到自己需要的資訊。
+      - 
+
+      - 希望每個走進來的朋友，都能在這裡找到對你有幫助的資訊。
 
   socialIcons:
     - name: email
