@@ -4,6 +4,7 @@ tags:
   - AndroidStudio
   - SBOM
 date: 2024-06-20
+description: 如何使用 Android Studio 產製 SBOM (Software Bill of Materials) 軟體物料清單
 ---
 
 ## 前言

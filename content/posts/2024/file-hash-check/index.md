@@ -3,6 +3,7 @@ date = '2024-07-29T09:12:00+08:00'
 draft = false
 title = '如何查看檔案雜湊值 (MD5、SHA256、SHA1)'
 tags = ['hash']
+description = '如何在 Windows 與 Mac OS 上查看檔案的雜湊值 (MD5, SHA256, SHA1)'
 +++
 
 ## Windows

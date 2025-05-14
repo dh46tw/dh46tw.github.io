@@ -4,6 +4,7 @@ tags:
   - Android
   - SplashScreen
 date: 2021-01-27
+description: 介紹如何在不同 Android 版本上，實作 App 的歡迎畫面 Splash Screen
 ---
 
 ## 一、前言

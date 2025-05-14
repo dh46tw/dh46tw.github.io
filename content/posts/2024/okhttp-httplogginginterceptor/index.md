@@ -3,6 +3,7 @@ title: 印出 API 的 Log--OkHttp HttpLoggingInterceptor (Retrofit 適用)
 tags:
   - Android/Network
 date: 2024-03-14
+description: 本文介紹如何使用 HttpLoggingInterceptor 來輕鬆記錄 Retrofit API 請求與回應的 Log，並解決上傳大型檔案時因為 Log 記錄而引發的 OutOfMemoryError 問題。
 ---
 
 ## 介紹

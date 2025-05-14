@@ -4,6 +4,7 @@ tags:
   - Android
   - EncryptedSharedPreference
 date: 2021-10-08
+description: 介紹 Android 開發中，可以將資料加密儲存的 EncryptedSharedPreferences
 ---
 
 ## 介紹

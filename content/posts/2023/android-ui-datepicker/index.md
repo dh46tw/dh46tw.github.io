@@ -3,6 +3,7 @@ tags:
   - Android/UI
 title: Android UI 日期時間選擇 DatePicker
 date: 2023-10-31
+description: 本文介紹在 Android 開發中，如何使用 Material Design API 建立日期時間選擇 UI。
 ---
 
 ## 簡介

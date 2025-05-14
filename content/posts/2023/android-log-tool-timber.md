@@ -4,6 +4,7 @@ tags:
   - Published
   - Android
 date: 2023-05-27
+description: 本文介紹了 Timber 這個 Android Logger Library，它是基於 Android Log 的開發工具，解決了開發過程中需要移除 Log 訊息的問題，並提供簡潔易用的 API 來進行日誌記錄。詳細介紹了如何使用 Timber，包括安裝、初始化與基本操作。
 ---
 
 > 本文同步發表在 [HackMD](https://hackmd.io/@dh46tw/android-lib-timber) & [Medium](https://dh46tw.medium.com/%E6%AF%94-android-%E5%8E%9F%E7%94%9F%E6%9B%B4%E6%96%B9%E4%BE%BF%E7%9A%84-log-%E5%B7%A5%E5%85%B7-timber-bc7e27e78cb8)

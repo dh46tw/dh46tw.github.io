@@ -4,6 +4,7 @@ tags:
   - Android
   - Android/DateTime
 date: 2024-08-26
+description: 本文探討如何在 Android 中取得準確且不可篡改的時間，介紹多種方法，包括 SystemClock、NTP 時間同步、TrueTime 庫與 GPS 衛星時間，並解決 GPS 週數迴圈問題。
 ---
 
 ## 一、前言

@@ -4,6 +4,7 @@ tags:
   - Android/Build
   - Gradle
 date: 2025-04-28
+description: 教你如何用 Gradle 的 versionNameSuffix 搭配打包時間，自動為 APK 加上唯一版本識別，提升 Android App 測試流程的辨識效率與方便性。
 ---
 
 在開發 App 的過程中，常常需要產出不同版本的 APK，給團隊成員或測試人員驗證功能。  這時候，「快速辨識版本」就變成一件非常重要的事了。

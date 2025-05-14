@@ -3,6 +3,7 @@ title: Kobo Clara HD 閱讀器電源鍵脆化維修記錄
 tags:
   - KoboClaraHD
 date: 2025-04-04
+description: 分享如何用創意方式修復 Kobo Clara HD 閱讀器的脆化電源鍵，並使用 iPhone 電源鍵作為替代品，讓設備復活，適合沒有 3D 列印機的使用者。
 ---
 
 今天來分享一個跟軟體開發上無關的小故事。

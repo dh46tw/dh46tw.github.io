@@ -5,6 +5,7 @@ tags:
   - Android/Intent
   - GoogleMapsSDK
 date: 2025-02-19
+description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開啟路徑規劃，支援停靠點與不同導航模式。
 ---
 
 ## 前言

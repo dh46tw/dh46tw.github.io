@@ -3,6 +3,7 @@ title: Android 常用 ADB 指令
 tags:
   - Android
 date: 2021-11-17T16:52:00
+description: 介紹 Android 開發中常用的 ADB 指令
 ---
 
 ## 裝置

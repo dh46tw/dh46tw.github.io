@@ -4,6 +4,7 @@ tags:
   - Android
   - EncryptedSharedPreference
 date: 2025-02-11
+description: 解決 Android App 開啟時因 EncryptedSharedPreferences 引發的閃退問題，分析原因並提供具體解決方案，避免因 Auto Backup 導致的資料恢復錯誤。
 ---
 
 ## 一、問題描述

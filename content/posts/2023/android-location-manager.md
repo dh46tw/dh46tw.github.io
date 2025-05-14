@@ -5,6 +5,7 @@ tags:
   - Android/Location
   - GPS
 date: 2023-05-24
+description: 本文介紹如何在 Android 中使用 LocationManager 請求定位權限和進行定位更新，並提供了動態請求定位權限、初始化 LocationManager、以及根據系統版本選擇適合的定位提供者（如 GPS_PROVIDER 或 FUSED_PROVIDER）的步驟。
 ---
 
 > 📢 除非有特殊需求，官方建議使用 Google Fused Location Provider API。

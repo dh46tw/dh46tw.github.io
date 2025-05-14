@@ -4,6 +4,7 @@ tags:
   - Postman
   - Swagger
 date: 2020-02-20
+description: 介紹如何將 Swagger 上的 API 快速匯入到 Postman 裡
 ---
 
 > 同步發表在 [HackMD](https://hackmd.io/@dh46tw/swagger-to-postman) & [Medium](https://medium.com/@dh46tw/swagger-匯入-postman-筆記-af206199b483)

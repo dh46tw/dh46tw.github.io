@@ -3,6 +3,7 @@ title: Android 動態更改應用程式圖標 App Icon
 tags: 
   - Android
 date: 2023-11-23T16:38:00
+description: 本文探討 Android 上如何動態更改應用程式圖標 App Icon 的方法，並提供範例程式碼。
 ---
 
 ## 一、問題描述

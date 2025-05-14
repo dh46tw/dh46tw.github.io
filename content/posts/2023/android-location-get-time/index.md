@@ -5,6 +5,7 @@ tags:
   - Android/Location
 date: 2023-05-27
 featuredImage: 'attachments/cover-spacex-unsplash.png'
+description: 本文探討 Android 開發中，使用 Location API 取得的時間值，並非 GPS 衛星時間。內文提供實驗的過程與結果，並提供讀者可參考的解決方案。
 ---
 
 ![](attachments/cover-spacex-unsplash.png)
@@ -85,4 +86,4 @@ featuredImage: 'attachments/cover-spacex-unsplash.png'
 
 ---
 
-> 本文同步更新在 [Medium](https://medium.com/@dh46-tw/android-%E5%AE%9A%E4%BD%8D%E7%B5%90%E6%9E%9C%E7%9A%84-location-gettime-%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E8%A1%9B%E6%98%9F%E6%99%82%E9%96%93-72bbdffdb67c)
+> 本文同步更新在 [Medium](https://medium.com/@dh46tw/android-%E5%AE%9A%E4%BD%8D%E7%B5%90%E6%9E%9C%E7%9A%84-location-gettime-%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AF%E8%A1%9B%E6%98%9F%E6%99%82%E9%96%93-72bbdffdb67c)

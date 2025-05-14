@@ -4,6 +4,7 @@ tags:
   - Android
   - Certificate
 date: 2022-10-26
+description: 說明 Android 開發上遇到的憑證無效問題，並提供解決方法
 ---
 
 ## 問題
