@@ -5,6 +5,7 @@ tags:
   - Android/Intent
   - GoogleMapsSDK
 date: 2025-02-19
+lastMod: 2025-05-15
 description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開啟路徑規劃，支援停靠點與不同導航模式。
 ---
 
@@ -43,9 +44,28 @@ description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開
 顧名思義，就是開啟 Google Maps 的路徑規劃功能。
 呼叫之後會在 Google Maps 上開啟點到點之間的路徑，並顯示距離和時間。
 
-| 路徑規劃示意圖                                        | 路徑規劃示意圖 (使用定位作為起點)                               | 導航示意圖                                                     |
-| ---------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
-| ![](attachments/maps-urls-directions-demo.png) | ![](attachments/maps-urls-directions-demo-2.png) | ![](attachments/maps-urls-directions-navigation-demo.png) |
+<table>
+    <thead>
+        <tr>
+            <th style="width:33.3%; text-align:center;">路徑規劃示意圖</th>
+            <th style="width:33.3%; text-align:center;">路徑規劃示意圖 (使用定位作為起點)</th>
+            <th style="width:33.3%; text-align:center;">導航示意圖</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width:33.3%; text-align:center;">
+                <img src="attachments/maps-urls-directions-demo.png" style="width:100%;" />
+            </td>
+            <td style="width:33.3%; text-align:center;">
+                <img src="attachments/maps-urls-directions-demo-2.png" style="width:100%;" />
+            </td>
+            <td style="width:33.3%; text-align:center;">
+                <img src="attachments/maps-urls-directions-navigation-demo.png" style="width:100%;" />
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 以上面三張圖來說，左側與中間的圖是路徑規劃，右側的圖是導航功能。
 
@@ -123,72 +143,118 @@ import android.net.Uri
 import com.google.android.gms.maps.model.LatLng  
   
 /**  
- *  Created by danielhuang on 2025/2/7
- * */
+ * Created by danielhuang on 2025/2/7 
+ * GoogleMapsIntentHelper 是一個工具類，用於使用 Google Maps App 啟動導航功能。  
+ */  
 object GoogleMapsIntentHelper {  
   
-    private val baseUrl = "https://www.google.com/maps/dir/?"  
+    // Google Maps 路徑規劃的基礎 URL    
+    private const val MAPS_BASE_URL = "https://www.google.com/maps/dir/?"  
+    // Google Maps 最大停靠點數  
+    private const val MAX_WAYPOINTS = 8  
   
     /**  
-     * 開啟路徑規劃  
+     * 啟動 Google Maps 導航功能  
      *  
      * @param context  
-     * @param origin 起點  
-     * @param destination 終點  
-     * @param waypoints 停靠點 (最多 9 個)  
-     * @param travelMode  
+     * @param navRequest 導航請求的詳細資料，包括起點、終點、停靠點與交通模式  
      */  
     fun startNavDirection(  
         context: Context,  
-        origin: LatLng,  
-        destination: LatLng,  
-        waypoints: List<LatLng>? = null,  
-        travelMode: TravelMode = TravelMode.DRIVE  
+        navRequest: NavRequest  
     ) {  
-        // 固定參數  
-        val apiType = "api=1"  
-        val originStr = "&origin=${origin.latitude},${origin.longitude}"  
-        val destinationStr =
-	        "&destination=${destination.latitude},${destination.longitude}"  
-        val travelMode = "&travelmode=${travelMode.value}"  
+        // 建立 Navigation URL        
+        val navigationUrl = buildNavigationUrl(navRequest)  
   
-        // 轉換停靠點成字串格式  
-        val waypointsStr =  waypoints.toWaypointsStr()  
+        // 建立 Intent 並設定目標為 Google Maps App
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(navigationUrl))  
+            .apply {  
+                // 確保使用 Google Maps App                
+                setPackage("com.google.android.apps.maps")  
+            }  
   
-        // 建立完整的導航 URL        
-        val navigationUrl =
-	        "$baseUrl$apiType$originStr$destinationStr$travelMode$waypointsStr"  
-  
-        // 建立 Intent 並開啟 Google Maps        
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(navigationUrl))
-        .apply {  
-            setPackage("com.google.android.apps.maps") 
-            // 確保使用 Google Maps App        
-        }  
-  
+        // 檢查是否安裝 Google Maps，並啟動導航  
         if (intent.resolveActivity(context.packageManager) != null) {  
-            context.startActivity(intent)  
+            context.startActivity(intent)
         } else {  
-            throw Error("Google Maps 未安裝")  
+            throw GoogleMapsNotFoundException()  
         }  
     }  
   
+    /**  
+     * 建立完整的導航 URL
+     * @param navRequest  
+     * @return  
+     */  
+    private fun buildNavigationUrl(navRequest: NavRequest): String {  
+        // 固定參數  
+        val apiType = "api=1"  
+        // 起點  
+        val originStr = "&origin=${navRequest.origin.latitude},${navRequest.origin.longitude}"  
+        // 終點  
+        val destinationStr =  
+            "&destination=${navRequest.destination.latitude},${navRequest.destination.longitude}"  
+        // 導航模式  
+        val travelMode = "&travelmode=${navRequest.travelMode.value}"  
+  
+        // 轉換停靠點成字串格式  
+        val waypointsStr = navRequest.waypoints.toWaypointsStr()  
+  
+        // 建立完整的導航 URL        
+        return "$MAPS_BASE_URL$apiType$originStr$destinationStr$travelMode$waypointsStr"  
+    }  
+  
+    /**  
+     * 將停靠點座標列表轉換為 Google Maps URL 所需的字串格式  
+     *  
+     * @return 停靠點的字串，若無停靠點則為空字串  
+     */  
     private fun List<LatLng>?.toWaypointsStr(): String {  
         if (isNullOrEmpty()) return ""  
-        val points = subList(0, 9).joinToString("|") { 
-	        "${it.latitude},${it.longitude}" 
+  
+        if (size > MAX_WAYPOINTS) {  
+            throw TooManyWayPointsException()  
+        }  
+  
+        val points = this.joinToString("|") {  
+            "${it.latitude},${it.longitude}"  
         }  
         return "&waypoints=$points"  
     }  
   
-    enum class TravelMode(val value: String) {  
-        DRIVE("drive"),  
-        WALKING("walking"),  
-        BICYCLING("bicycling"),  
-        TRANSIT("transit"),  
-        TWO_WHEELER("two-wheeler")  
+    /**  
+     * 導航模式  
+     *  
+     * @property value value 對應於 Google Maps 的導航模式參數值  
+     * @constructor Create empty Travel mode  
+     */    
+     enum class TravelMode(val value: String) {  
+        DRIVE("drive"), // 開車  
+        WALKING("walking"), // 步行  
+        BICYCLING("bicycling"), // 騎自行車  
+        TRANSIT("transit"), // 大眾交通工具  
+        TWO_WHEELER("two-wheeler") // 雙輪車 (如摩托車)  
     }  
-}
+  
+    /**  
+     * 導航請求的資料類  
+     *  
+     * @param origin 起點座標  
+     * @param destination 終點座標  
+     * @param waypoints 停靠點列表 (最多 8 個)  
+     * @param travelMode 交通模式，預設為開車模式  
+     */  
+    data class NavRequest(  
+        val origin: LatLng,  
+        val destination: LatLng,  
+        val waypoints: List<LatLng>? = null,  
+        val travelMode: TravelMode = TravelMode.DRIVE  
+    )  
+}  
+  
+class GoogleMapsNotFoundException: RuntimeException("No Google Maps app found on device")  
+  
+class TooManyWayPointsException: IllegalArgumentException("Way points cannot exceed 8!")
 ```
 
 ## 結語

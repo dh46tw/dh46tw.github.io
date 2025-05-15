@@ -158,6 +158,9 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     noClasses: false # 是否使用 CSS class 來套用語法高亮樣式（搭配 pygmentsUseClasses: true）
     # anchorLineNos: true
