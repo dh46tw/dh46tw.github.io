@@ -44,7 +44,12 @@ description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開
 顧名思義，就是開啟 Google Maps 的路徑規劃功能。
 呼叫之後會在 Google Maps 上開啟點到點之間的路徑，並顯示距離和時間。
 
-<table>
+| 路徑規劃示意圖                                        | 路徑規劃示意圖 (使用定位作為起點)                               | 導航示意圖                                                     |
+| ---------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
+| ![](attachments/maps-urls-directions-demo.png) | ![](attachments/maps-urls-directions-demo-2.png) | ![](attachments/maps-urls-directions-navigation-demo.png) |
+
+
+<!-- <table>
     <thead>
         <tr>
             <th style="width:33.3%; text-align:center;">路徑規劃示意圖</th>
@@ -65,7 +70,7 @@ description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開
             </td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 以上面三張圖來說，左側與中間的圖是路徑規劃，右側的圖是導航功能。
 
