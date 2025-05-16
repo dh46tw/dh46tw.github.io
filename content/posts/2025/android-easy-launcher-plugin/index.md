@@ -3,7 +3,7 @@ title: Android 開發｜用 easylauncher 為每個版本自動加上專屬 App I
 tags:
   - Android/Gradle
   - AppIcon
-date: 2025-05-16
+date: 2025-05-15
 description: 在 Android 專案中常見多個 build variant？用 easylauncher-gradle-plugin 為不同版本自動加上辨識用 App Icon Ribbon，讓 debug、beta、release 一目了然，提升開發與測試效率！
 ---
 
