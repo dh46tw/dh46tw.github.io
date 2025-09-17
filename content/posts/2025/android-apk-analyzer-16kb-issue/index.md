@@ -10,7 +10,7 @@ description: 開發 Android App 時遇到 Play Console 顯示的 16 KB Page Size
 
 ## 前言
 
-最近應該不少開發者都有在 Google Play Console 收到一則關於 **16 KB 記憶體分頁大小 (page size)** 的政策審查通知。
+最近應該不少 Android 開發者都有在 Google Play Console 收到一則關於 **16 KB 記憶體分頁大小 (page size)** 的政策審查通知。
 
 ![Google Play Console 16 KB 政策警告](attachments/google-play-16kb-policy-alert.png)
 
@@ -28,7 +28,7 @@ description: 開發 Android App 時遇到 Play Console 顯示的 16 KB Page Size
 
 在實際用 APK Analyzer 檢查的時候，我發現了一個狀況。
 
-### Google Play Console 顯示結果與本地檢查不一致
+**Google Play Console 顯示結果與本地檢查不一致**
 
 > 使用環境：Android Studio Meerkat | 2024.3.1 。
 
@@ -56,7 +56,7 @@ StackOverflow 的討論串裡有人提到，除了 APK Analyzer，也可以用 A
 - **APK Analyzer** → 顯示已 16 KB Aligned
 - **Analyze Code** → 顯示存在 4 KB Aligned 的 Libs
 
-這代表 APK Analyzer 的結果不一定可靠。
+這代表 Android Studio 提供的工具，其檢測的結果不一定可靠。
 
 ### Android Studio APK Analyzer 的 Bug
 
@@ -69,16 +69,17 @@ StackOverflow 的討論串裡有人提到，除了 APK Analyzer，也可以用 A
 > 
 > [StackOverflow - The '16 KB page sizes' issue wasn't resolved, even though the bundle details indicated that the latest version supports 16 KB page size](https://stackoverflow.com/questions/79754556/the-16-kb-page-sizes-issue-wasnt-resolved-even-though-the-bundle-details-ind)
 
-綜合 StackOverflow 上的討論內容與實測結果，可以推測 **Android Studio 的 APK Analyzer 在某些版本有 Bug**。
+綜合 StackOverflow 上的討論內容，可以推測 **Android Studio 的 APK Analyzer 在某些版本有 Bug**。
 
 - Narwhal 2025.1.1 ~ 2025.1.2：無論專案是否修正，檢查結果都可能錯誤。
 - Narwhal 2025.1.3：APK Analyzer 可能會直接忽略問題 Libs，讓結果「看起來正常」。
 
-### 更新至最新版 Android Stuio Narwhal 3 Feature Drop | 2025.1.3 
+> 查詢 Android Studio Narwhal 2025.1.3 的[版本更新說明](https://developer.android.com/studio/releases/fixed-bugs/studio/2025.1.3#android-studio-narwhal-feature-drop-|-2025.1.3-canary-2) ，雖然有提到針對 16 KB 檢測的修正，但細節跟 StackOverflow 上的討論又有些不同。
 
-實際更新到 Narwhal 3 Feature Drop | 2025.1.3  後測試，APK Analyzer 的檢查有正確顯示，並沒有 StackOverflow 上提的問題。
+### 更新至最新版 Android Studio Narwhal 3 Feature Drop | 2025.1.3 
 
-查詢 [版本更新說明](https://developer.android.com/studio/releases/fixed-bugs/studio/2025.1.3#android-studio-narwhal-feature-drop-|-2025.1.3-canary-2) ，也確實有提到針對 16 KB 的修正。
+既然網路上查到的資料都沒有一個定案，不如就實際更新到 Narwhal 3 Feature Drop | 2025.1.3 來試試。
+實際測試後發現，APK Analyzer 的檢查有正確顯示，並沒有 StackOverflow 上提的問題。
 
 #### 實測結果
 
@@ -95,8 +96,10 @@ StackOverflow 的討論串裡有人提到，除了 APK Analyzer，也可以用 A
 
 ## 結論
 
-如果你也遇到 **APK Analyzer 與 Google Play Console 顯示結果不一致**的情況，可以檢查看看是否是因為 Android Studio 的版本問題。
+如果你也遇到 **APK Analyzer 與 Google Play Console 顯示結果不一致**的情況，而 Android Studio 剛好是上面提到的幾個問題版本，也許可以試著更新至 **Narwhal 3 Feature Drop | 2025.1.3** ，或其他更新的版本。
 
-可以嘗試更新至 **Narwhal 3 Feature Drop | 2025.1.3** 或更新的版本，但要注意，最終是否支援 **仍以 Google Play Console 的檢查結果為準**。實際上線前也別忘了在支援 16KB page size 的裝置上測試過，避免在執行時出現非預期的錯誤。
+但要注意，App 最終是否支援 16 KB Page Size，**仍是以上傳到 Google Play Console 後的檢查結果為準**。實際上線前也別忘了在支援 16KB Page Size 的裝置上測過，避免在執行時出現非預期的錯誤。
 
-以上就是這次的經驗分享，歡迎在留言區分享你遇到的狀況。👋
+以上就是這次的經驗分享，歡迎在留言區分享你遇到的狀況。
+
+掰！👋
