@@ -23,7 +23,7 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["/img/author.jpg"] # 設定 OpenGraph (OG) 圖片，讓社交媒體預覽時顯示縮圖
   DateFormat: "January 2, 2006" # 設定文章日期顯示格式（這是 Go 語言的日期格式）
-  defaultTheme: auto # dark, light
+  defaultTheme: light # dark, light, auto
   disableThemeToggle: false
 
   ShowReadingTime: true # 顯示「閱讀時間」標籤（根據字數計算文章閱讀所需時間）
@@ -183,7 +183,7 @@ services:
     ID: G-Q39164QFN5
 
 sitemap:
-  changeFreq: "" # 建議搜尋引擎該頁面多久更新一次，空字串 ("")，表示不向搜尋引擎建議更新頻率。
+  changeFreq: "weekly" # 建議搜尋引擎該頁面多久更新一次，空字串 ("")，表示不向搜尋引擎建議更新頻率。
   disable: false # 是否停用 sitemap 產生。
   filename: sitemap.xml # sitemap 檔案名稱。
   priority: -1 # 建議搜尋引擎該頁面的重要性，範圍 0.0 ~ 1.0，-1 表示不向搜尋引擎建議重要性。
