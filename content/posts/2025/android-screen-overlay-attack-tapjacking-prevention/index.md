@@ -56,7 +56,7 @@ cover:
 
 1. 避免 App 不被其他 App 遮蔽。
 2. 在 App 畫面被遮蔽時，使觸控事件無效。
-3. ~~警告使用者不要亂安裝奇怪的東西跟亂給權限?! XD~~
+3. ~~🙃 警告使用者不要亂安裝奇怪的東西跟亂給權限… 🙃~~
 
 以下整理幾種常見、有效、並且可依系統版本選擇的防護方式。
 
@@ -103,7 +103,7 @@ private fun setHideOverlayWindows(activity: Activity) {
 - 支援版本： Android 9 (API 28) 以前建議採用
 - 效果： 在 View 被遮蔽時，忽略觸控事件
 
-```kotlin
+```xml
 <com.google.android.material.button.MaterialButton  
     android:id="@+id/btn_one_click"
     android:filterTouchesWhenObscured="true" />
@@ -223,8 +223,8 @@ class SecureConstraintLayout @JvmOverloads constructor(
 ## 參考資料
 
 - [Android Doc - Privacy and Security - Tapjacking](https://developer.android.com/privacy-and-security/risks/tapjacking)
-- [鑑真數位的 Facebook 貼文](https://www.facebook.com/photo.php?fbid=973159521485249&id=100063736312782&set=a.480780450723161&locale=zh_TW)
-- [鑑真數位的 Blog](https://iforensicsblog.blogspot.com/2024/07/blog-post.html)
+- [鑒真數位的 Facebook 貼文](https://www.facebook.com/photo.php?fbid=973159521485249&id=100063736312782&set=a.480780450723161&locale=zh_TW)
+- [鑒真數位的 Blog](https://iforensicsblog.blogspot.com/2024/07/blog-post.html)
 - [OWASP 介紹如何檢測 Tap Jacking](https://mas.owasp.org/MASTG/tests/android/MASVS-PLATFORM/MASTG-TEST-0035/)
 - [Android Doc 保護敏感活動](https://developer.android.com/security/fraud-prevention/activities?hl=zh-tw)
 - [Medium What is Tapjacking in Android and How to Prevent It](https://medium.com/devknoxio/what-is-tapjacking-in-android-and-how-to-prevent-it-50140e57bf44)
