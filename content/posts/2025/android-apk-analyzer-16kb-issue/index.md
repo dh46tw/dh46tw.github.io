@@ -4,8 +4,21 @@ tags:
   - GooglePlay
   - 16KBPageSize
   - AndroidStudio
+keywords:
+  - Android 開發
+  - Google Play
+  - 16 KB Page Size
+  - APK Analyzer
+  - Play Console
 date: 2025-09-17
-description: 開發 Android App 時遇到 Play Console 顯示的 16 KB Page Size 與 APK Analyzer 檢查結果不一致？本文分享原因分析與實際解法，幫助你正確驗證 16 KB 對齊狀態。
+description: "開發 Android App 時遇到 Play Console 顯示的 16 KB Page Size 與 APK Analyzer 檢查結果不一致？本文分享原因分析與實際解法，幫助你正確驗證 16 KB 對齊狀態。"
+summary: "開發 Android App 時遇到 Play Console 顯示的 16 KB Page Size 與 APK Analyzer 檢查結果不一致？本文分享原因分析與實際解法，幫助你正確驗證 16 KB 對齊狀態。"
+cover:
+  image: "attachments/google-play-16kb-policy-alert.png"
+  relative: true # 圖片在文章相對路徑
+  hidden: true           # 不隱藏 cover
+  hiddenInList: false     # 在列表頁顯示 cover
+  hiddenInSingle: true   # 在單篇頁面顯示 cover
 ---
 
 ## 前言
