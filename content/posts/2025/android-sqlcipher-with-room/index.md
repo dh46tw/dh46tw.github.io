@@ -100,7 +100,8 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 
 要啟用加密，我們需要建立一個 `SupportOpenHelperFactory` 物件，並將加密密碼傳入，最後再透過 `RoomDatabase.Builder.openHelperFactory()` 方法將其設定給 Room。
 
-> ⚠️ 有關加密的密碼
+> ⚠️ 有關加密的密碼  
+> 
 > 下方的範例是為了方便說明。在正式產品中，**絕對不應**將密碼以明文方式儲存在程式碼裡。
 > 應該將密碼儲存 Android KeyStore 等受保護且安全的儲存環境，或者採取其他手段保護。
 
@@ -147,6 +148,7 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 ```
 
 完成以上步驟後，Room 資料庫在建立時就會自動加密了。
+
 ## 驗證加密是否成功
 
 ### 處理現有的未加密資料庫
@@ -154,11 +156,12 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 整合 SQLCipher 後，如果 App 中已存在同名的**未加密**資料庫檔案，程式在啟動時會因無法解密而拋出 `SQLiteException` 錯誤。
 
 - **對於新安裝的 App**：不會有任何問題，程式會直接建立新的加密資料庫。
-- **對於已存在的 App**：除非是沒有需要保留資料，否則都會需要處理資料轉移（Migration）。簡單的策略是：
-    1.  建立一個使用 SQLCipher 且**不同檔名**的新資料庫。
-    2.  用標準的 SQLite API 開啟舊的未加密資料庫。
-    3.  讀取舊資料並寫入新的加密資料庫。
-    4.  完成後刪除舊的資料庫檔案。
+- **對於已存在的 App**：除非是沒有需要保留資料，否則都會需要處理資料轉移（Migration）。
+  - 簡單的策略是：
+    1. 建立一個使用 SQLCipher 且**不同檔名**的新資料庫。
+    2. 用標準的 SQLite API 開啟舊的未加密資料庫。
+    3. 讀取舊資料並寫入新的加密資料庫。
+    4. 完成後刪除舊的資料庫檔案。
 
 ### 使用工具檢視資料庫
 
@@ -167,8 +170,8 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 以下以 Windows 為例：
 
 1. 透過 Android Studio 的 **Device Explorer** 將 App `databases` 資料夾下的資料庫檔案匯出到電腦。
-2. 下載並安裝 [DB Browser for SQLite](https://sqlitebrowser.org/)
-3. 開啟 `DB Browser for SQLCipher.exe`
+2. 下載並安裝 [DB Browser for SQLite](https://sqlitebrowser.org/)。
+3. 開啟 `DB Browser for SQLCipher.exe`。
 4. 選擇「開啟資料庫」，並選取匯出的檔案。此時，工具會要求要輸入密碼。![](attachments/android-sqlcipher-db-browser-for-sqlite-decrypted.png)
 5. 輸入正確的密碼後，應該就能正常看到資料庫內的資料表與內容。如果沒有密碼就無法開啟，代表加密已成功！
 
