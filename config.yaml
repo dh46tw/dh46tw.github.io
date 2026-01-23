@@ -3,6 +3,8 @@ title: Code with DH
 paginate: 5 # 首頁最近文章數量
 theme: PaperMod
 timeZone: "Asia/Taipei" # 設定時區
+languageCode: "zh-tw"
+defaultContentLanguage: "zh-tw"
 
 enableRobotsTXT: true
 buildDrafts: false
