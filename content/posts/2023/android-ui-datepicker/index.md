@@ -4,8 +4,20 @@ tags:
 title: Android UI 日期時間選擇 DatePicker
 date: 2023-10-31
 description: 本文介紹在 Android 開發中，如何使用 Material Design API 建立日期時間選擇 UI。
+keywords:
+  - "Android/UI"
+  - "Android"
+  - "UI"
+  - "Android UI 日期時間選擇 DatePicker"
+cover:
+  image: "attachments/img-material-datepicker-range-1.png"
+  relative: true
+  alt: "Android UI 日期時間選擇 DatePicker"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 本文介紹在 Android 開發中，如何使用 Material Design API 建立日期時間選擇 UI。
 ---
-
 ## 簡介
 
 Android 原生提供的日期時間選擇 UI。
@@ -15,7 +27,7 @@ Android 原生提供的日期時間選擇 UI。
 
 ### 日期區間選擇 DateRangePicker
 
-| ![](attachments/img-material-datepicker-range-1.png) | ![](attachments/img-material-datepicker-range-2.png)    |
+| ![Android UI 日期時間選擇 DatePicker操作畫面1](attachments/img-material-datepicker-range-1.png) | ![Android UI 日期時間選擇 DatePicker操作畫面2](attachments/img-material-datepicker-range-2.png)    |
 | ------------------------------------------- | ------------------------------------------- |
 
 #### Kotlin
@@ -66,7 +78,7 @@ dateRangePicker.show(getChildFragmentManager(), TAG_DATE_PICKER);
 
 ### 單一日期選擇 DatePicker
 
-|  ![](attachments/img-datepicker-single-1.png)   | ![](attachments/img-datepicker-single-2.png)    |
+|  ![Android UI 日期時間選擇 DatePicker操作畫面3](attachments/img-datepicker-single-1.png)   | ![Android UI 日期時間選擇 DatePicker操作畫面4](attachments/img-datepicker-single-2.png)    |
 | --- | --- |
 
 ```kotlin
@@ -123,7 +135,7 @@ java.lang.IllegalArgumentException: com.google.android.material.datepicker.Mater
 
 ## DatePicker
 
-![](attachments/img-datepicker-1.png)
+![Android UI 日期時間選擇 DatePicker操作畫面5](attachments/img-datepicker-1.png)
 
 ```xml
 <DatePicker  
@@ -164,7 +176,7 @@ binding.datePicker.setOnDateChangedListener { view, year, monthOfYear, dayOfMont
     android:theme="@style/DatePickerTheme"/>
 ```
 
-![](attachments/img-datepicker-2.png)
+![Android UI 日期時間選擇 DatePicker操作畫面6](attachments/img-datepicker-2.png)
 
 但是使用 `DatePicker` 比較大的問題是寬度沒辦法完全的 `match_parent`。
 
@@ -174,7 +186,7 @@ binding.datePicker.setOnDateChangedListener { view, year, monthOfYear, dayOfMont
 
 ## CalendarView
 
-![](attachments/img-calendar-view-1.png)
+![Android UI 日期時間選擇 DatePicker操作畫面7](attachments/img-calendar-view-1.png)
 
 ```xml
 <CalendarView  

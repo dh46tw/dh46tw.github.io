@@ -27,13 +27,13 @@ cover:
   hidden: true           # 不隱藏 cover
   hiddenInList: false     # 在列表頁顯示 cover
   hiddenInSingle: true   # 在單篇頁面顯示 cover
+summary: "整理 Android App 防範螢幕覆蓋攻擊（Tapjacking）的方法，包含 FLAG_SECURE、setHideOverlayWindows、filterTouchesWhenObscured 與自訂 View 防護策略。"
 ---
-
-![](attachments/android-tapjacking-cover-gemini.png)
+![Android 資安 | 螢幕覆蓋攻擊（Tapjacking）防護筆記操作畫面1](attachments/android-tapjacking-cover-gemini.png)
 
 今年度的資安檢測基準新增了「螢幕覆蓋攻擊」的檢測項目。剛好最近送測的專案也因此被點出不符規範，加上後續的專案預期都會受到影響，因此特別整理這篇筆記，讓自己能快速掌握概念，並理解各種防護方式的實作細節。
 
-![](attachments/android-security-screen-overlay-attack.png)
+![Android 資安 | 螢幕覆蓋攻擊（Tapjacking）防護筆記操作畫面2](attachments/android-security-screen-overlay-attack.png)
 
 ## 什麼是螢幕覆蓋攻擊（Screen Overlay Attack）？
 

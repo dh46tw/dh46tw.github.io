@@ -5,8 +5,20 @@ tags:
   - Android/DateTime
 date: 2024-08-26
 description: 本文探討如何在 Android 中取得準確且不可篡改的時間，介紹多種方法，包括 SystemClock、NTP 時間同步、TrueTime 庫與 GPS 衛星時間，並解決 GPS 週數迴圈問題。
+keywords:
+  - "Android"
+  - "Android/DateTime"
+  - "DateTime"
+  - "如何在 Android 上取得準確且不被用戶竄改的時間"
+cover:
+  image: "attachments/android-accurate-time-true-time-logo.png"
+  relative: true
+  alt: "如何在 Android 上取得準確且不被用戶竄改的時間"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 本文探討如何在 Android 中取得準確且不可篡改的時間，介紹多種方法，包括 SystemClock、NTP 時間同步、TrueTime 庫與 GPS 衛星時間，並解決 GPS 週數迴圈問題。
 ---
-
 ## 一、前言
 
 前陣子專案有一項需求，是希望 App 能夠**取得準確且不會被使用者竄改的時間**。

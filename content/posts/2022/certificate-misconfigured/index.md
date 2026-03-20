@@ -5,8 +5,19 @@ tags:
   - Certificate
 date: 2022-10-26
 description: 說明 Android 開發上遇到的憑證無效問題，並提供解決方法
+keywords:
+  - "Android"
+  - "Certificate"
+  - "網站憑證在 PC 端有效但 Android 上出現無效憑證問題"
+cover:
+  image: "img-cert-misconfigured.jpg"
+  relative: true
+  alt: "網站憑證在 PC 端有效但 Android 上出現無效憑證問題"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 說明 Android 開發上遇到的憑證無效問題，並提供解決方法
 ---
-
 ## 問題
 
 網站更換憑證後在電腦瀏覽器上可正常瀏覽，但手機端卻出現憑證無效的錯誤。
@@ -35,8 +46,8 @@ javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorExcepti
 
 使用 [What's My Chain Cert 憑證設定檢查網站](https://whatsmychaincert.com/)，比對兩個網址的設定，也確實異常的那個網站是有錯誤的。
 
-![](img-cert-misconfigured.jpg)
-![](img-cert-correct-configured.jpg)
+![網站憑證在 PC 端有效但 Android 上出現無效憑證問題操作畫面1](img-cert-misconfigured.jpg)
+![網站憑證在 PC 端有效但 Android 上出現無效憑證問題操作畫面2](img-cert-correct-configured.jpg)
 
 ## 解決方案
 
@@ -49,15 +60,15 @@ javax.net.ssl.SSLHandshakeException: java.security.cert.CertPathValidatorExcepti
 
 使用 [What's My Chain Cert 憑證設定檢查網站](https://whatsmychaincert.com/) 檢查，確認是 Misconfigured。
 
-![](img-cert-coagis-misconfigured.png)
+![網站憑證在 PC 端有效但 Android 上出現無效憑證問題操作畫面3](img-cert-coagis-misconfigured.png)
 
 改用 [SSLChecker 憑證設定檢查網站](https://www.sslchecker.com/sslchecker) ，更明確指出斷在哪裡。
 
-![](img-cert-ssl-checker-edited.png)
+![網站憑證在 PC 端有效但 Android 上出現無效憑證問題操作畫面4](img-cert-ssl-checker-edited.png)
 
 伺服器端匯入中繼憑證後，使用 [SSLShopper SSL Checker](https://www.sslshopper.com/ssl-checker.html) 檢查通過。
 
-![](img-cert-sslshopper-passed.png)
+![網站憑證在 PC 端有效但 Android 上出現無效憑證問題操作畫面5](img-cert-sslshopper-passed.png)
 
 ## 參考資料
 

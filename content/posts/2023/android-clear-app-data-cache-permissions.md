@@ -4,8 +4,11 @@ tags:
   - Android
 date: 2023-12-05
 description: 本文提供了解決方案，教學如何在 Android 中實現刪除資料與快取功能，使 App 能夠回到初始安裝狀態。對於 Android 4.4 以後的版本，建議使用 ActivityManager.clearApplicationUserData()，而對於舊版則使用 Runtime.exec() 執行 ADB 指令。
+keywords:
+  - "Android"
+  - "Android 開發｜一鍵清除 App 資料，還原初始狀態的實作方法"
+summary: 本文提供了解決方案，教學如何在 Android 中實現刪除資料與快取功能，使 App 能夠回到初始安裝狀態。對於 Android 4.4 以後的版本，建議使用 ActivityManager.clearApplicationUserData()，而對於舊版則使用 Runtime.exec() 執行 ADB 指令。
 ---
-
 ## 問題說明
 
 前陣子剛好海巡到 [一則 iT 邦幫忙上的技術提問](https://ithelp.ithome.com.tw/questions/10214760)，大略找了一下資料，發現實作細節不難就順手回了一下。對方最後成功地完成他預期的需求，很高興能夠幫到對方的忙~

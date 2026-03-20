@@ -4,8 +4,13 @@ tags:
   - Android/Build
 date: 2025-09-12
 description: Android Studio 出現「Error loading build artifacts」導致無法編譯？本文提供詳細錯誤訊息、排查步驟與最終修復方式，協助開發者快速解決問題。
+keywords:
+  - "Android/Build"
+  - "Android"
+  - "Build"
+  - "Android Studio 編譯失敗 - Error loading build artifacts"
+summary: Android Studio 出現「Error loading build artifacts」導致無法編譯？本文提供詳細錯誤訊息、排查步驟與最終修復方式，協助開發者快速解決問題。
 ---
-
 前幾天在公司專案遇到一個奇怪的 Bug，這裡筆記一下解決過程。
 
 ---

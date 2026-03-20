@@ -5,8 +5,14 @@ tags:
   - Gradle
 date: 2025-04-28
 description: 教你如何用 Gradle 的 versionNameSuffix 搭配打包時間，自動為 APK 加上唯一版本識別，提升 Android App 測試流程的辨識效率與方便性。
+keywords:
+  - "Android/Build"
+  - "Android"
+  - "Build"
+  - "Gradle"
+  - "Android 開發 | 讓 Gradle 自動在版本名稱後加上 Build 時間"
+summary: 教你如何用 Gradle 的 versionNameSuffix 搭配打包時間，自動為 APK 加上唯一版本識別，提升 Android App 測試流程的辨識效率與方便性。
 ---
-
 在開發 App 的過程中，常常需要產出不同版本的 APK，給團隊成員或測試人員驗證功能。  這時候，「快速辨識版本」就變成一件非常重要的事了。
 
 最常見、也最直接的方法，就是利用 Gradle 的 `versionNameSuffix`，在 App 的版本名稱後面自動加上一些額外資訊。  以我們團隊的習慣來說，我們會直接加上**Build 當下的時間**作為版本流水號，這樣每個 APK 都能有獨一無二的識別。但如果每次出新版本，都還要**手動去改 Gradle 設定**，實在是有點麻煩。

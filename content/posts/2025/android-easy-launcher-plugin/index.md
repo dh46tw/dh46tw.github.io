@@ -12,8 +12,14 @@ keywords:
   - Gradle
   - AppIcon
   - easylauncher
+cover:
+  image: "attachments/img-easylauncher.png"
+  relative: true
+  alt: "Android 開發｜用 easylauncher 為每個版本自動加上專屬 App Icon"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
 ---
-
 ## 前言
 
 在 Android 開發中，專案預設會有 `debug` 和 `release` 這兩種 build type，用來區分開發環境與正式環境。根據專案規模與開發流程，有些團隊甚至會進一步細分為 `alpha`、`beta` 等不同的 build variant，用以區隔開發的不同階段。

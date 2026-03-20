@@ -4,8 +4,20 @@ tags:
   - Android/Network
 date: 2024-03-14
 description: 本文介紹如何使用 HttpLoggingInterceptor 來輕鬆記錄 Retrofit API 請求與回應的 Log，並解決上傳大型檔案時因為 Log 記錄而引發的 OutOfMemoryError 問題。
+keywords:
+  - "Android/Network"
+  - "Android"
+  - "Network"
+  - "印出 API 的 Log--OkHttp HttpLoggingInterceptor (Retrofit 適用)"
+cover:
+  image: "attachments/img-okhttp-interceptor.png"
+  relative: true
+  alt: "印出 API 的 Log--OkHttp HttpLoggingInterceptor (Retrofit 適用)"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 本文介紹如何使用 HttpLoggingInterceptor 來輕鬆記錄 Retrofit API 請求與回應的 Log，並解決上傳大型檔案時因為 Log 記錄而引發的 OutOfMemoryError 問題。
 ---
-
 ## 介紹
 
 以往為了檢查 API 呼叫的 Request 或 Response 是否正確，都是土法煉鋼式的自行加註 `Log`。後來改用 Retrofit 之後，發現要加 `Log` 變得好麻煩，這才發現原來有 `HttpLoggingInterceptor` 可以自動印 Log 。
@@ -15,7 +27,7 @@ description: 本文介紹如何使用 HttpLoggingInterceptor 來輕鬆記錄 Ret
 
 
 > 👀 [OkHttp 的 Interceptors](https://square.github.io/okhttp/features/interceptors/) 介面有許多實作的類別，可以針對 API 呼叫做很多不一樣的事情，有興趣的讀者可以多利用這個關鍵字下去尋找相關的資料，本篇文章就不贅述。
-> ![](attachments/img-okhttp-interceptor.png)
+> ![印出 API 的 Log--OkHttp HttpLoggingInterceptor (Retrofit 適用)操作畫面1](attachments/img-okhttp-interceptor.png)
 
 ## 使用
 

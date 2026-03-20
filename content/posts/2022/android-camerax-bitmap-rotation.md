@@ -4,8 +4,13 @@ tags:
   - Android/Camera
 date: 2022-03-25
 description: 介紹 Android CameraX API 搭配 Bitmap 繪製照片時，會遇到的照片方向錯置問題與解決方案
+keywords:
+  - "Android/Camera"
+  - "Android"
+  - "Camera"
+  - "Android CameraX Bitmap 繪製後照片方向錯誤"
+summary: 介紹 Android CameraX API 搭配 Bitmap 繪製照片時，會遇到的照片方向錯置問題與解決方案
 ---
-
 ## 問題說明
 
 在使用 CameraX API 時，如果有在相機初始時實作下列程式碼，原則上API 會根據目前手機的方向來自動轉正相片。

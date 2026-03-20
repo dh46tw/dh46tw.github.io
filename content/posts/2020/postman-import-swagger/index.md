@@ -5,27 +5,38 @@ tags:
   - Swagger
 date: 2020-02-20
 description: 介紹如何將 Swagger 上的 API 快速匯入到 Postman 裡
+keywords:
+  - "Postman"
+  - "Swagger"
+  - "[分享] Swagger 匯入 Postman"
+cover:
+  image: "attachments/swagger-to-postman-1.png"
+  relative: true
+  alt: "[分享] Swagger 匯入 Postman"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 介紹如何將 Swagger 上的 API 快速匯入到 Postman 裡
 ---
-
 > 同步發表在 [HackMD](https://hackmd.io/@dh46tw/swagger-to-postman) & [Medium](https://medium.com/@dh46tw/swagger-匯入-postman-筆記-af206199b483)
 
 ## 方法一
 
 ### 1. 取得Swagger的 json link
 
-![](attachments/swagger-to-postman-1.png)
+![Swagger 匯入 Postman操作畫面1](attachments/swagger-to-postman-1.png)
 
 ### 2. 打開Postman 點選 import
 
-![](attachments/swagger-to-postman-2.png)
+![Swagger 匯入 Postman操作畫面2](attachments/swagger-to-postman-2.png)
 
 ### 3. 選擇 Import From Link 頁籤並填入 Json Link
 
-![](attachments/swagger-to-postman-3.png)
+![Swagger 匯入 Postman操作畫面3](attachments/swagger-to-postman-3.png)
 
 ### 4. 勾選 Generate a Postman Collection 後下一步
 
-![](attachments/swagger-to-postman-4.png)
+![Swagger 匯入 Postman操作畫面4](attachments/swagger-to-postman-4.png)
 
 ### 5. 完成!
 
@@ -41,7 +52,7 @@ description: 介紹如何將 Swagger 上的 API 快速匯入到 Postman 裡
 
 ### 2. 複製 curl 區塊的內容
 
-![](attachments/swagger-to-postman-5.png)
+![Swagger 匯入 Postman操作畫面5](attachments/swagger-to-postman-5.png)
 
 ### 3. 打開 Postman 選擇 Import/Paste Raw Text 貼上
 

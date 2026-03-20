@@ -7,8 +7,22 @@ tags:
 date: 2025-02-19
 lastMod: 2025-05-15
 description: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開啟路徑規劃，支援停靠點與不同導航模式。
+keywords:
+  - "MapsURLs"
+  - "Android/Intent"
+  - "Android"
+  - "Intent"
+  - "GoogleMapsSDK"
+  - "使用 Maps URLs 開啟 Google Maps 的路徑規劃功能"
+cover:
+  image: "attachments/maps-urls-directions-demo-2.png"
+  relative: true
+  alt: "使用 Maps URLs 開啟 Google Maps 的路徑規劃功能"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 如何在 Android App 中，透過程式呼叫 Google Maps URLs 開啟路徑規劃，支援停靠點與不同導航模式。
 ---
-
 ## 前言
 
 工作上負責開發維護的一款 App，最近被提了一個新的需求。

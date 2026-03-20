@@ -5,8 +5,13 @@ tags:
   - Android/AlarmManager
 date: 2024-03-27
 description: 解決 Android 14 精確鬧鐘設定閃退問題，介紹 SCHEDULE_EXACT_ALARM 和 USE_EXACT_ALARM 權限設定，提供最佳實踐，幫助開發者應對精確鬧鐘功能在新系統中的變動。
+keywords:
+  - "Android"
+  - "Android/AlarmManager"
+  - "AlarmManager"
+  - "Android 14 AlarmManager SCHEDULE_EXACT_ALARM 權限閃退"
+summary: 解決 Android 14 精確鬧鐘設定閃退問題，介紹 SCHEDULE_EXACT_ALARM 和 USE_EXACT_ALARM 權限設定，提供最佳實踐，幫助開發者應對精確鬧鐘功能在新系統中的變動。
 ---
-
 ## 一、問題描述
 
 Android 14 的使用者反映應用程式閃退，經查測後發現是設定指定時間提醒功能時出現閃退。

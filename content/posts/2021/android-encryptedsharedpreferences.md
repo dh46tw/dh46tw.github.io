@@ -5,8 +5,12 @@ tags:
   - EncryptedSharedPreference
 date: 2021-10-08
 description: 介紹 Android 開發中，可以將資料加密儲存的 EncryptedSharedPreferences
+keywords:
+  - "Android"
+  - "EncryptedSharedPreference"
+  - "Android 開發 | 加密版的 SharedPreference - EncryptedSharedPreferences"
+summary: 介紹 Android 開發中，可以將資料加密儲存的 EncryptedSharedPreferences
 ---
-
 ## 介紹
 
 根據[官方文件](https://developer.android.com/topic/security/data.md#key-management)， `EncryptedSharedPreferences` 使用 2-part system 來管理金鑰，並用金鑰加解密儲存的資料。

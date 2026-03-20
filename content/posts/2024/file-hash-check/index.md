@@ -4,8 +4,16 @@ draft = false
 title = '如何查看檔案雜湊值 (MD5、SHA256、SHA1)'
 tags = ['hash']
 description = '如何在 Windows 與 Mac OS 上查看檔案的雜湊值 (MD5, SHA256, SHA1)'
+keywords = ["hash", "如何查看檔案雜湊值 (MD5、SHA256、SHA1)"]
+[cover]
+image = "file-hash-check-7-zip.png"
+relative = true
+alt = "如何查看檔案雜湊值 (MD5、SHA256、SHA1)"
+hidden = false
+hiddenInList = false
+hiddenInSingle = true
+summary = '如何在 Windows 與 Mac OS 上查看檔案的雜湊值 (MD5, SHA256, SHA1)'
 +++
-
 ## Windows
 
 ### 使用命令提示字元 CMD
@@ -33,7 +41,7 @@ certutil -hashfile myfile.txt SHA1
 
 ### 使用 7-Zip 查看
 
-![image](./file-hash-check-7-zip.png)
+![如何查看檔案雜湊值 (MD5、SHA256、SHA1)操作畫面1](./file-hash-check-7-zip.png)
 
 1. 右鍵點選檔案開啟選單
 2. 選擇 7-Zip / CRC SHA

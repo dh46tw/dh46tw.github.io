@@ -4,13 +4,16 @@ tags:
   - Android
 date: 2021-03-31T18:31:00
 description: Associate Android Developer 證照考試心得分享
+keywords:
+  - "Android"
+  - "2021 Associate Android Developer 考試心得"
+summary: Associate Android Developer 證照考試心得分享
 ---
-
 📢 2024/08/26 更新 
 
 [Google 已不再接受新的考試報名，看來也沒有要再開新的 Android 認證了😢。](https://developers.google.com/certification/associate-android-developer)
 
-![image](https://hackmd.io/_uploads/ryP12OYoA.png)
+![2021 Associate Android Developer 考試心得操作畫面1](https://hackmd.io/_uploads/ryP12OYoA.png)
 
 ## 前言
 
@@ -25,7 +28,7 @@ description: Associate Android Developer 證照考試心得分享
 
 ## 第一步: 報名
 
-![](https://i.imgur.com/nsLXeLh.png)
+![2021 Associate Android Developer 考試心得操作畫面2](https://i.imgur.com/nsLXeLh.png)
 
 [報名連結](https://developers.google.com/certification/associate-android-developer)
 

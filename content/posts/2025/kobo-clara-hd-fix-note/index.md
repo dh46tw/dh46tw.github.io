@@ -4,8 +4,18 @@ tags:
   - KoboClaraHD
 date: 2025-04-04
 description: 分享如何用創意方式修復 Kobo Clara HD 閱讀器的脆化電源鍵，並使用 iPhone 電源鍵作為替代品，讓設備復活，適合沒有 3D 列印機的使用者。
+keywords:
+  - "KoboClaraHD"
+  - "Kobo Clara HD 閱讀器電源鍵脆化維修記錄"
+cover:
+  image: "attachments/kobo-clara-hd-fix-facebook.png"
+  relative: true
+  alt: "Kobo Clara HD 閱讀器電源鍵脆化維修記錄"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 分享如何用創意方式修復 Kobo Clara HD 閱讀器的脆化電源鍵，並使用 iPhone 電源鍵作為替代品，讓設備復活，適合沒有 3D 列印機的使用者。
 ---
-
 今天來分享一個跟軟體開發上無關的小故事。
 
 Kobo 的閱讀器也買了好幾年了，最近雖然不像剛買的時候那麼頻繁地使用，但也是想到就會拿來看一下書。
@@ -16,7 +26,7 @@ Kobo 的閱讀器也買了好幾年了，最近雖然不像剛買的時候那麼
 
 搜尋了一輪，網路上的論壇只有提到用 3D 列印的方式，列印一個新的按鈕。甚至還有好心的網友，將 3D 列印的檔案分享出來，讓大家自行下載製作。
 
-![image](attachments/kobo-clara-hd-fix-facebook.png)
+![Kobo Clara HD 閱讀器電源鍵脆化維修記錄操作畫面1](attachments/kobo-clara-hd-fix-facebook.png)
 
 {{< youtube 7XNkF4LgomA >}}
 
@@ -25,11 +35,11 @@ Kobo 的閱讀器也買了好幾年了，最近雖然不像剛買的時候那麼
 
 因此，在拆機將脆化的按鍵拿出後，我開始尋找手邊是否有尺寸大小與電源鍵類似的小東西，也許可以作為替代品使用。
 
-![image](attachments/kobo-clara-hd-board.jpeg)
+![Kobo Clara HD 閱讀器電源鍵脆化維修記錄操作畫面2](attachments/kobo-clara-hd-board.jpeg)
 
 然後，我就發現[犀牛盾出的 iPhone 電源鍵](https://shop.rhinoshield.tw/products/button/buy)，大小非常地適合！
 
-![image](attachments/kobo-clara-hd-rhinoshield.png)
+![Kobo Clara HD 閱讀器電源鍵脆化維修記錄操作畫面3](attachments/kobo-clara-hd-rhinoshield.png)
 
 一開始我嘗試由內向外將按鍵卡入機殼的電源孔，但因為內部主機板與外殼的空間過小，再加上孔洞大小很剛好，所以一直無法將按鈕裝上。
 
@@ -37,7 +47,7 @@ Kobo 的閱讀器也買了好幾年了，最近雖然不像剛買的時候那麼
 
 最後我的閱讀器就變成下面這個樣子。
 
-![image](attachments/kobo-clara-hd-finished.jpeg)
+![Kobo Clara HD 閱讀器電源鍵脆化維修記錄操作畫面4](attachments/kobo-clara-hd-finished.jpeg)
 
 復活啦！！
 

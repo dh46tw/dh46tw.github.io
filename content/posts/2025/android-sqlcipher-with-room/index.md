@@ -24,6 +24,7 @@ cover:
   hidden: true           # 不隱藏 cover
   hiddenInList: false     # 在列表頁顯示 cover
   hiddenInSingle: false   # 在單篇頁面顯示 cover
+summary: "Android SQLCipher 與 Room 加密指南，教你為 SQLite 資料庫加入安全保護，避免敏感資訊在資安檢測中外洩。內容涵蓋整合步驟、密碼設定與驗證方式，讓 App 本地儲存更安全。"
 ---
 ## 前言
 
@@ -40,7 +41,7 @@ cover:
 
 首先，先認識一下本篇文章的主角，SQLCipher。
 
-![](attachments/android-sqlcipher-intro.png)
+![Android 資安 | 使用 SQLCipher 替 Room 資料庫加密操作畫面1](attachments/android-sqlcipher-intro.png)
 
 SQLCipher 是由 Zetetic 公司所開發與維護的 SQLite 加密套件，它透過簡單的擴充，為 SQLite 資料庫提供了透明、可靠的加密層。
 
@@ -172,7 +173,7 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 1. 透過 Android Studio 的 **Device Explorer** 將 App `databases` 資料夾下的資料庫檔案匯出到電腦。
 2. 下載並安裝 [DB Browser for SQLite](https://sqlitebrowser.org/)。
 3. 開啟 `DB Browser for SQLCipher.exe`。
-4. 選擇「開啟資料庫」，並選取匯出的檔案。此時，工具會要求要輸入密碼。![](attachments/android-sqlcipher-db-browser-for-sqlite-decrypted.png)
+4. 選擇「開啟資料庫」，並選取匯出的檔案。此時，工具會要求要輸入密碼。![Android 資安 | 使用 SQLCipher 替 Room 資料庫加密操作畫面2](attachments/android-sqlcipher-db-browser-for-sqlite-decrypted.png)
 5. 輸入正確的密碼後，應該就能正常看到資料庫內的資料表與內容。如果沒有密碼就無法開啟，代表加密已成功！
 
 ## SQLCipher 開源版的授權宣告
@@ -182,7 +183,7 @@ fun provideSampleDatabase(app: Application): SampleDatabase {
 首先，SQLCipher 是可以商用的，但必須在程式與文件內包含 BSD 授權條款與著作權宣告。
 舉例來說，如果我是在 Android App 中使用了 SQLCipher，我除了在 README 或 NOTICE 等文件中要寫上授權外，在 App 內的設定頁或說明頁中，應該也要有顯示完整的授權與著作權宣告。
 
-![](attachments/android-sqlcipher-license.png)
+![Android 資安 | 使用 SQLCipher 替 Room 資料庫加密操作畫面3](attachments/android-sqlcipher-license.png)
 
 ---
 

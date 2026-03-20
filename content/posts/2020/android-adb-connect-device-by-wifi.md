@@ -4,8 +4,11 @@ tags:
   - Android
 date: 2020-07-21
 description: 介紹在 Android 開發中，如何使用 ADB 指令透過 Wi-Fi 連接手機
+keywords:
+  - "Android"
+  - "Android 使用 ADB 指令以 Wi-Fi 連接手機"
+summary: 介紹在 Android 開發中，如何使用 ADB 指令透過 Wi-Fi 連接手機
 ---
-
 ## 前言
 
 以往要連接測試裝置都一定要使用實體傳輸線。

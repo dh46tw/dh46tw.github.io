@@ -5,8 +5,19 @@ tags:
   - SplashScreen
 date: 2021-01-27
 description: 介紹如何在不同 Android 版本上，實作 App 的歡迎畫面 Splash Screen
+keywords:
+  - "Android"
+  - "SplashScreen"
+  - "Android 開發 | 歡迎畫面 Splash Screen"
+cover:
+  image: "attachments/android-splash-screen-icon-sizes.png"
+  relative: true
+  alt: "Android 開發 | 歡迎畫面 Splash Screen"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 介紹如何在不同 Android 版本上，實作 App 的歡迎畫面 Splash Screen
 ---
-
 ## 一、前言
 
 歡迎畫面會是使用者打開 App 時，第一個看到的畫面，畫面顯示的時間長度，會根據 App 啟動的速度而有所不同。
@@ -233,7 +244,7 @@ class MainActivity : AppCompatActivity() {
 - 帶有背景的 Icon: 大小 240x240dp，圖示必須在直徑 160dp 的範圍內。
 - 不帶有背景的 Icon: 大小 288x288dp，圖示必須在直徑 192dp 的範圍內。
 
-![](attachments/android-splash-screen-icon-sizes.png)
+![Android 開發 | 歡迎畫面 Splash Screen操作畫面1](attachments/android-splash-screen-icon-sizes.png)
 
 如果沒有特別調整 Icon，放入之後會被系統的圓形遮罩裁切。
 而在不調整圖片大小的情況下，可以用以下的方式解決。

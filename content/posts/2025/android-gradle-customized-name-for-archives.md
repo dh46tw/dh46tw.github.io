@@ -6,8 +6,14 @@ tags:
 date: 2025-04-30
 lastMod: 2025-05-14
 description: 教你如何透過 Gradle 客製 Android 專案輸出檔案名稱，為 APK、AAB、AAR 自動加上版本號與 Build Type，提升測試流程與團隊協作效率。
+keywords:
+  - "Android/Build"
+  - "Android"
+  - "Build"
+  - "Gradle"
+  - "Android 開發 | 讓 Gradle 自動為 AAR、AAB、APK 設定客製化檔名"
+summary: 教你如何透過 Gradle 客製 Android 專案輸出檔案名稱，為 APK、AAB、AAR 自動加上版本號與 Build Type，提升測試流程與團隊協作效率。
 ---
-
 每次打包 AAB 或 APK，Android Studio 預設都會產出像 `app-release.aab` 或 `app-debug.apk` 這類的檔案名稱。這種預設命名在使用 Firebase App Distribution 或 Google Play 內部測試流程時，雖然不太會造成困擾，但如果你需要將 APK 或 AAB 檔案直接提供給 PM、QA 或外部合作夥伴安裝測試，那麼能夠一眼看出檔案版本與類型，會讓流程更順暢也更不容易搞混。
 
 本文將示範如何透過 Gradle 設定，讓你在打包時自動加上版本號、Build Type 等資訊，生成便於辨識的輸出檔名。

@@ -4,8 +4,9 @@ draft = false
 title = 'Git 更新版本'
 tags = ['Git']
 description = '如何查詢 Git 目前版本並更新至新版'
+keywords = ["Git", "Git 更新版本"]
+summary = '如何查詢 Git 目前版本並更新至新版'
 +++
-
 ## 1. 檢查目前 Git 版本
 
 打開命令提示字元，輸入以下指令檢查目前 Git 版本

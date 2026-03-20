@@ -17,8 +17,8 @@ cover:
   hidden: false           # 不隱藏 cover
   hiddenInList: false     # 在列表頁顯示 cover
   hiddenInSingle: false   # 在單篇頁面顯示 cover
+summary: "使用 Gemini Code Assist 加速開發也不能忽略資安風險！學會如何透過 .aiexclude 檔案排除機敏檔案，保護 Android Studio 專案中的敏感資料，並了解 Context Awareness 設定方式。"
 ---
-
 ## 前言
 
 許多開發者已經習慣使用各種 AI 工具來加速開發流程。對於 Android 開發者來說，如果不想額外付費，Google 官方推出的 **Gemini Code Assist** 無疑是最佳選擇之一。

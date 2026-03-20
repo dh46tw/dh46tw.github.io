@@ -6,8 +6,18 @@ tags:
 date: 2024-06-20
 description: 如何使用 Android Studio 產製 SBOM (Software Bill of Materials) 軟體物料清單
 summary: 如何使用 Android Studio 產製 SBOM (Software Bill of Materials) 軟體物料清單
+keywords:
+  - "AndroidStudio"
+  - "SBOM"
+  - "Android Studio 產製 SBOM 軟體物料清單"
+cover:
+  image: "sbom-spdx-success.webp"
+  relative: true
+  alt: "Android Studio 產製 SBOM 軟體物料清單"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
 ---
-
 ## 前言
 
 公司專案近期收到客戶的要求，疑似因為數發部想推動[公部門的開放原始碼](https://code.gov.tw/)，需要廠商填寫系統相關資訊，其中一項就包含 SBOM 軟體物料清單。

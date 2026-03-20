@@ -6,8 +6,13 @@ tags:
   - ChatBot
 date: 2022-04-11
 description: 本文記錄在 Android 專案中嘗試使用 Google Cloud Dialogflow Java SDK 串接聊天機器人的測試過程。內容包含初始化、訊息處理的實作方式，以及遇到的相容性問題與安全風險。這不是官方支援的做法，僅供開發實驗與研究參考。
+keywords:
+  - "Android"
+  - "DialogFlow"
+  - "ChatBot"
+  - "Dialogflow 在 Android 上的非官方串接實驗記錄"
+summary: 本文記錄在 Android 專案中嘗試使用 Google Cloud Dialogflow Java SDK 串接聊天機器人的測試過程。內容包含初始化、訊息處理的實作方式，以及遇到的相容性問題與安全風險。這不是官方支援的做法，僅供開發實驗與研究參考。
 ---
-
 > ⚠️ 本文記錄的是 Dialogflow 在 Android 上的測試性串接，並非官方支援或建議做法。若需穩定實作，建議改採 REST API 或透過後端 Proxy 呼叫。
 
 ## 前言

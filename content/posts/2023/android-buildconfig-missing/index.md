@@ -3,11 +3,24 @@ title: Android BuildConfig 消失了?
 tags:
   - Android/Build
 date: 2023-06-30
+description: "說明 Android 專案升級到 Gradle 8.0.0 之後 BuildConfig 找不到的原因，並整理在 build.gradle 重新開啟 buildConfig 的解法。"
+summary: "說明 Android 專案升級到 Gradle 8.0.0 之後 BuildConfig 找不到的原因，並整理在 build.gradle 重新開啟 buildConfig 的解法。"
+keywords:
+  - "Android/Build"
+  - "Android"
+  - "Build"
+  - "Android BuildConfig 消失了?"
+cover:
+  image: "attachments/android-buildconfig-missing.png"
+  relative: true
+  alt: "說明 Android 專案升級到 Gradle 8.0.0 之後 BuildConfig 找不到的原因，並整理在 build.gradle 重新開啟 buildConfig 的解法。"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
 ---
-
 ## 問題
 
-![](attachments/android-buildconfig-missing.png)
+![Android BuildConfig 消失了?操作畫面1](attachments/android-buildconfig-missing.png)
 
 最近開新專案的時候，發現寫 BuildConfig 都沒有出現 prompt，後來才發現是新的專案要另外開設定。
 

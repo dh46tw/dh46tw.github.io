@@ -15,8 +15,8 @@ cover:
   hidden: false           # 不隱藏 cover
   hiddenInList: false     # 在列表頁顯示 cover
   hiddenInSingle: false   # 在單篇頁面顯示 cover
+summary: "在 Android 開發中使用 Kotlin 的 use {} 是常見的資源釋放寫法，但你知道在 Android 11 (API 30) 以前對某些類別其實會造成 Crash 嗎？這篇文章帶你深入解析 TypedArray 為什麼不能直接用 use {}，並提供正確的修正方式與建議，避免掉不必要的陷阱！"
 ---
-
 在 Android 開發中，我們常使用 Kotlin 的 `use {}` 語法來自動管理資源，例如關閉檔案、關閉資料庫 Cursor。但這個便利的語法在 Android 11 以下，對某些類別其實會出錯造成應用程式閃退。如果一時不查，小心這坑就這樣踩了下去...
 
 ## 錯誤說明

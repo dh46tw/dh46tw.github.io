@@ -13,8 +13,8 @@ cover:
   hidden: false           # 不隱藏 cover
   hiddenInList: false     # 在列表頁顯示 cover
   hiddenInSingle: false   # 在單篇頁面顯示 cover
+summary: "使用 Android Studio Android 15 以後的 Emulator 時，如果發現軟體鍵盤（Soft Keyboard）沒有顯示，本篇將教你透過設定快速開啟，解決鍵盤無法輸入的問題。"
 ---
-
 ## 問題說明
 
 在 Android Studio **Android 15 後的模擬器**中，預設情況下開啟鍵盤會看到這樣的畫面：

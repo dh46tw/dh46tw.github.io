@@ -4,15 +4,25 @@ tags:
   - Android
 date: 2023-11-23T16:38:00
 description: 本文探討 Android 上如何動態更改應用程式圖標 App Icon 的方法，並提供範例程式碼。
+keywords:
+  - "Android"
+  - "Android 動態更改應用程式圖標 App Icon"
+cover:
+  image: "attachments/Pasted image 20241227105916.png"
+  relative: true
+  alt: "Android 動態更改應用程式圖標 App Icon"
+  hidden: false
+  hiddenInList: false
+  hiddenInSingle: true
+summary: 本文探討 Android 上如何動態更改應用程式圖標 App Icon 的方法，並提供範例程式碼。
 ---
-
 ## 一、問題描述
 
 最近使用 [Todoist](https://play.google.com/store/apps/details?id=com.todoist&pcampaignid=web_share) 做任務管理時發現，App 內有提供自選圖標的功能，也就是動態更換 App 的 Launcher Icon。
 
 | Step 0                                               | Step 1                                               | Step 2                                               | Step 3                                               |
 | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| ![](attachments/Pasted%20image%2020241227105916.png) | ![](attachments/Pasted%20image%2020241227105926.png) | ![](attachments/Pasted%20image%2020241227105934.png) | ![](attachments/Pasted%20image%2020241227105943.png) |
+| ![Android 動態更改應用程式圖標 App Icon操作畫面1](attachments/Pasted%20image%2020241227105916.png) | ![Android 動態更改應用程式圖標 App Icon操作畫面2](attachments/Pasted%20image%2020241227105926.png) | ![Android 動態更改應用程式圖標 App Icon操作畫面3](attachments/Pasted%20image%2020241227105934.png) | ![Android 動態更改應用程式圖標 App Icon操作畫面4](attachments/Pasted%20image%2020241227105943.png) |
 | 按下按鈕啟用自選圖標功能。                                        | 原本 App 預設是紅色的 App Icon。                              | 在 App 內設定指定的 Icon 後。                                 | Launcher 上的 Todoist Icon 就真的換剛才所選的 App Icon 了！       |
 
 另外一個 App [DuckDuckGo](https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&pcampaignid=web_share) 也有一樣的功能。不過操作流程上不太一樣。DuckDuckGo 不需要特別啟用自選圖標，但在每次更換 Icon 時，App 都會在設定完成後自動關閉，使用者必須自動重啟 App 才能繼續使用。 
@@ -116,7 +126,7 @@ private fun changeEnabledComponent(enabled: String, disabled: String) {
 
 細讀 [StackOverflow: Change Android Launcher Icon like Instagram/Todoist](https://stackoverflow.com/q/68576022/9982091) 裡的討論，與 [Github oguzhanaslann/DynamicIcon](https://github.com/oguzhanaslann/DynamicIcon/) 專案，並查看反編譯 Todoist 後得到的 `AndroidManifest.xml`。
 
-![](attachments/Pasted%20image%2020241227110003.png)
+![Android 動態更改應用程式圖標 App Icon操作畫面5](attachments/Pasted%20image%2020241227110003.png)
 
 整理出最終的設計流程大概是下方這樣。
 
@@ -433,7 +443,7 @@ class AppIconManager(
 
 💡 以上完成的版本，就可以達到與 Todoist 相同的使用體驗。
 
-![](attachments/android-dynamic-app-icon.gif)
+![Android 動態更改應用程式圖標 App Icon示範動畫6](attachments/android-dynamic-app-icon.gif)
 
 如果有需要完整的範例專案，請參考 [Github: dh46tw/android-dynamic-app-icon-demo](https://github.com/dh46tw/android-dynamic-app-icon-demo)。
 
