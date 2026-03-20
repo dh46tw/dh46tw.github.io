@@ -1,0 +1,30 @@
+{{- $alt := .Params.cover.alt | default .Description | default .Title | plainify | htmlUnescape | chomp -}}
+{{- $image := dict -}}
+{{- $coverImage := .Params.cover.image | default .Params.image -}}
+
+{{- if $coverImage -}}
+  {{- if eq .Params.cover.relative true -}}
+    {{- with .Resources.GetMatch $coverImage -}}
+      {{- $image = dict "permalink" .Permalink "alt" $alt "width" .Width "height" .Height -}}
+    {{- else -}}
+      {{- $image = dict "permalink" ((path.Join $.RelPermalink $coverImage) | absURL) "alt" $alt -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $url := urls.Parse $coverImage -}}
+    {{- if eq $url.Scheme "" -}}
+      {{- $image = dict "permalink" ($coverImage | absURL) "alt" $alt -}}
+    {{- else -}}
+      {{- $image = dict "permalink" $coverImage "alt" $alt -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $images := partial "partials/templates/_funcs/get-page-images" . -}}
+  {{- with index $images 0 -}}
+    {{- $image = dict "permalink" .Permalink "alt" $alt -}}
+    {{- with .Image -}}
+      {{- $image = merge $image (dict "width" .Width "height" .Height) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $image -}}

@@ -1,0 +1,142 @@
+{{- $authorName := site.Params.author | default site.Title -}}
+{{- $publisherType := (site.Params.schema.publisherType | default "Organization") | title -}}
+{{- $sameAsScratch := newScratch -}}
+{{- $sameAsScratch.Set "items" (slice) -}}
+{{- with site.Params.schema.sameAs -}}
+  {{- $sameAsScratch.Set "items" . -}}
+{{- else -}}
+  {{- range site.Params.socialIcons -}}
+    {{- if or (strings.HasPrefix .url "https://") (strings.HasPrefix .url "http://") -}}
+      {{- $sameAsScratch.Add "items" (slice (.url | safeURL)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $sameAs := $sameAsScratch.Get "items" -}}
+
+{{- $logoScratch := newScratch -}}
+{{- $logoScratch.Set "url" (site.Params.assets.favicon | default "favicon.ico") -}}
+{{- with site.Params.images -}}
+  {{- $logoScratch.Set "url" (index . 0) -}}
+{{- end -}}
+{{- with site.Params.label.icon -}}
+  {{- $logoScratch.Set "url" . -}}
+{{- end -}}
+{{- $logoURL := ($logoScratch.Get "url") | absURL -}}
+
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ $publisherType }}",
+  "name": {{ if eq $publisherType "Person" }}{{ $authorName | plainify }}{{ else }}{{ site.Title | plainify }}{{ end }},
+  "url": {{ site.Home.Permalink }},
+  "description": {{ site.Params.description | plainify | htmlUnescape | chomp }},
+  {{- if eq $publisherType "Person" }}
+  "image": {{ $logoURL }},
+  {{- else }}
+  "logo": {{ $logoURL }},
+  {{- end }}
+  {{- with $sameAs }}
+  "sameAs": {{ jsonify . | safeJS }}
+  {{- else }}
+  "sameAs": []
+  {{- end }}
+}
+</script>
+{{- else if (or .IsPage .IsSection) }}
+{{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
+{{- $langURL := strings.TrimPrefix (printf "%s/" .Lang) $url }}
+{{- $bcList := split $langURL "/" }}
+{{- $bcScratch := newScratch }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+  {{- range $index, $element := $bcList }}
+    {{- $bcScratch.Add "path" (printf "%s/" $element) | safeJS }}
+    {{- $bcPage := site.GetPage ($bcScratch.Get "path") -}}
+    {{- if and $bcPage (gt (len .) 0) }}
+      {{- if $index }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add 1 $index }},
+      "name": {{ $bcPage.Name }},
+      "item": {{ $bcPage.Permalink | safeHTML }}
+    }
+    {{- end }}
+  {{- end }}
+  {{- if ge (len $bcList) 2 }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ len $bcList }},
+      "name": {{ .Name }},
+      "item": {{ .Permalink | safeHTML }}
+    }
+  ]
+}
+</script>
+
+  {{- if .IsPage }}
+    {{- $description := or (.Description | plainify | htmlUnescape | chomp) (.Summary | plainify | htmlUnescape | chomp) -}}
+    {{- $image := partial "partials/templates/_funcs/get-seo-image.html" . -}}
+    {{- $keywords := .Params.keywords | default .Params.tags | default (slice) -}}
+    {{- $authorSchema := dict "@type" "Person" "name" ($authorName | plainify) -}}
+    {{- with $sameAs -}}
+      {{- $authorSchema = merge $authorSchema (dict "sameAs" .) -}}
+    {{- end -}}
+    {{- $publisherSchema := dict "@type" $publisherType "name" ((cond (eq $publisherType "Person") ($authorName | plainify) (site.Title | plainify))) -}}
+    {{- if eq $publisherType "Person" -}}
+      {{- $publisherSchema = merge $publisherSchema (dict "image" $logoURL) -}}
+    {{- else -}}
+      {{- $publisherSchema = merge $publisherSchema (dict "logo" (dict "@type" "ImageObject" "url" $logoURL)) -}}
+    {{- end -}}
+    {{- with $sameAs -}}
+      {{- $publisherSchema = merge $publisherSchema (dict "sameAs" .) -}}
+    {{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | plainify }},
+  "name": {{ .Title | plainify }},
+  "description": {{ $description }},
+  "keywords": {{ jsonify $keywords | safeJS }},
+  "articleBody": {{ .Plain | htmlUnescape | chomp | truncate 5000 }},
+  "wordCount": "{{ .WordCount }}",
+  "inLanguage": {{ .Language.LanguageCode | default .Language.Lang | default "zh-tw" }},
+  {{- with $image.permalink }}
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ . }},
+    {{- with $image.width }}
+    "width": {{ . }},
+    {{- end }}
+    {{- with $image.height }}
+    "height": {{ . }},
+    {{- end }}
+    {{- with $image.alt }}
+    "caption": {{ . }}
+    {{- else }}
+    "caption": {{ $.Title | plainify }}
+    {{- end }}
+  },
+  {{- end }}
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {{ jsonify $authorSchema | safeJS }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "name": {{ site.Title | plainify }},
+    "url": {{ site.Home.Permalink }}
+  },
+  "publisher": {{ jsonify $publisherSchema | safeJS }}
+}
+</script>
+  {{- end }}
+{{- end -}}

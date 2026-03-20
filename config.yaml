@@ -1,6 +1,7 @@
 baseURL: "https://dh46tw.github.io/"
 title: Code with DH
-paginate: 5 # 首頁最近文章數量
+pagination:
+  pagerSize: 5 # 首頁最近文章數量
 theme: PaperMod
 timeZone: "Asia/Taipei" # 設定時區
 languageCode: "zh-tw"
@@ -109,6 +110,15 @@ params:
     - name: rss
       url: "/index.xml"
 
+  schema:
+    publisherType: "Organization"
+    sameAs:
+      - "https://linkedin.com/in/daniel-huang-2017"
+      - "https://github.com/dh46tw"
+      - "https://medium.com/@dh46tw"
+      - "https://stackoverflow.com/users/9982091/d-h"
+      - "https://ithelp.ithome.com.tw/users/20160271/profile"
+
   analytics:
     google:
       SiteVerificationTag: "LHTKPbW1GFa3DApZWBArO2q2XopPi2cHu0c39NoboaQ" # Google Search Console 的網站驗證標籤
@@ -177,7 +187,6 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
-    - SITEMAP
 
 # 設定 Google Analytics
 services:
