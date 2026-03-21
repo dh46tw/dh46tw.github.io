@@ -4,7 +4,7 @@ tags:
   - AndroidStudio
   - Webp
 date: 2026-03-21
-description: "教你用 Android Studio 內建 Convert to WebP 工具快速轉檔，實測將圖片由 5.9MB 降到 1.7MB，有效縮小 APK / App Bundle 體積。"
+description: "教你使用 Android Studio 內建 Convert to WebP 工具，完整示範 Lossy/Lossless 參數設定與轉檔流程，並用 APK Analyzer 實測圖片由 5.9MB 降到 1.7MB，快速縮小 APK 與 App Bundle 體積與下載時間。"
 summary: "本文示範 Android Studio Convert to WebP 的完整步驟與參數設定（Lossy / Lossless），並透過 APK Analyzer 比較轉檔前後大小，快速完成 App 圖片瘦身。"
 keywords:
   - "Android Studio WebP 轉檔"
