@@ -1,5 +1,5 @@
 ---
-title: Android Studio 產製 SBOM 軟體物料清單
+title: 如何替 Android 專案產製 SBOM 軟體物料清單
 tags:
   - AndroidStudio
   - SBOM
@@ -20,7 +20,9 @@ cover:
 ---
 ## 前言
 
-公司專案近期收到客戶的要求，疑似因為數發部想推動[公部門的開放原始碼](https://code.gov.tw/)，需要廠商填寫系統相關資訊，其中一項就包含 SBOM 軟體物料清單。
+不確定是否跟近期推動[公部門的開放原始碼](https://code.gov.tw/)有關，客戶開始詢問是否能夠提供系統的 SBOM 軟體物料清單。
+
+依照慣例，出現不懂的東西就是寫篇筆記送給未來的自己，就讓我們一起來看什麼是 SBOM 吧～
 
 ### 什麼是 SBOM 軟體物料清單
 
@@ -99,6 +101,7 @@ spdxSbom {
 
 > 📂 參考資料
 >  [Issue: Project Configuration Question #49](https://github.com/spdx/spdx-gradle-plugin/issues/49)
+
 #### 使用 Gradle 指令執行
 
 ```gradle=
@@ -207,6 +210,7 @@ Execution failed for task ':app:cyclonedxBom'.
 ```
 
 查到[專案 Issue](https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/256)上的討論串，最後在[最後一則留言](https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/256#issuecomment-1968821827)提到的[Wikimedia App 的專案](https://github.com/wikimedia/apps-android-wikipedia/commit/e7f27c964a8b8a654d4102e9b3c123fbf3c1845d)裡找到可用的參數。
+
 ## 參考資料
 
 - [艾索科技: 什麼是 SBOM ?](https://www.aisol.com.tw/index.php?action=solution&cid=23&id=197)
