@@ -23,7 +23,7 @@ cover:
   alt: "用 Android Studio 的內建 WebP 轉檔功能 讓 App 輕鬆瘦身"
   hidden: false
   hiddenInList: false
-  hiddenInSingle: true
+  hiddenInSingle: false
 ---
 
 ## 前言
